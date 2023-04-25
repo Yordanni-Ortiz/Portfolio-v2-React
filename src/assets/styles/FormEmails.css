@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+h1 {
+    text-align: center;
+    padding-bottom: 30px;
+}
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    background-color: #180A2B !important;
+    border-radius: 10px !important;
+    max-Width: 650px;
+}
+
+@media (max-width: 992px){
+.card {
+    max-Width: 500px;
+}
+}
+
+@media (max-width: 768px){
+.card {
+    max-Width: 350px;
+}
+}

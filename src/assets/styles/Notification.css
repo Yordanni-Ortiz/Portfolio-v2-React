@@ -1,0 +1,28 @@
+.toastContainer {
+    left: 39%;
+}
+
+@media (max-width: 992px){
+    .toastContainer {
+        left: 29%;
+    }
+}
+
+@media (max-width: 768px){
+    .toastContainer {
+        left: 13%;
+    }
+}
+
+@media (max-width: 500px){
+    .toastContainer {
+        left: 4%;
+    }
+}
+
+@media (max-width: 350px){
+    .toastContainer {
+        right: 0;
+    }
+}
+

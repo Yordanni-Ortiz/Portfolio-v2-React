@@ -1,0 +1,11 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.App{
+    background-color: #11071F;
+    color: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+}

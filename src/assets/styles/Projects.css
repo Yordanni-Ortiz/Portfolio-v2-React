@@ -1,0 +1,119 @@
+.projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    user-select: none;
+}
+.projectsText {
+    font-size: 45px;
+    border-radius: 10px;
+    border-bottom: 2px solid rgba(182, 148, 225, 0.8);
+}
+.projects .descriptions .lightTwo:hover {
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+}
+.lightTwo {
+    position: absolute;
+    border: none;
+    top: 1700px;
+    right: -300px;
+}
+.projects .descriptions {
+    background-color: #121824;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    border-radius: 15px;
+    margin-top: 25px;
+}
+.projects div {
+    background-color: #222226;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    border-radius: 15px;
+    text-align: center;
+    user-select: none;
+}
+.projects .container {
+    width: 280px;
+    height: 250px;
+    padding: 20px;   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+.projects .container:hover {
+    background-color: #232A67;
+    transition: all 0.3s ease;
+}
+.projects .titulo {
+    font-size: 20px;
+    margin-bottom: 10px;
+
+    border-radius: 5px;
+}
+.projects .subtitulo {
+    font-size: 12px;
+
+}
+
+@media (max-width: 1200px){
+.projects .container {
+    width: 240px;
+    height: 200px;
+}
+.projects .titulo {
+    font-size: 17px;
+}
+.projects .subtitulo {
+    font-size: 10px;
+}
+}
+
+@media (max-width: 992px){
+.projectsText {
+    font-size: 35px;
+}
+.projects .descriptions {  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%
+}
+
+}
+
+@media (max-width: 768px){
+.projectsText {
+    font-size: 25px;
+}
+.projects .titulo {
+    font-size: 13px;
+}
+.projects .subtitulo {
+    font-size: 8px;
+}
+.projects .container {
+    width: 180px;
+    height: 170px;
+}
+}
+
+@media (max-width: 500px){
+.projects .descriptions {
+    width: 250px;
+}
+}
+
+

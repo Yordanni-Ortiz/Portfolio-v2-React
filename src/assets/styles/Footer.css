@@ -1,0 +1,124 @@
+.footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+    padding-bottom: 30px;
+    background-color: rgba(26, 11, 46, 0.8);
+    user-select: none;
+}
+.footer .one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer a {
+    color: rgb(77, 37, 114);
+    text-shadow: none;
+    text-decoration: none;
+    font-size: 12px;
+    justify-content: center;
+    align-items: center;
+}
+.footer p {
+    margin-bottom: 0;
+}
+.footer a:hover {
+    color:rgba(154, 111, 211, 0.8);
+}
+.footer .academlo {
+    color: #E84959;
+}
+.footer .one .academlo:hover {
+    color: rgb(241, 133, 143);
+}
+.footer div {  
+    text-align: center;
+    font-size: 12px;
+    max-width: 600px;
+}
+.footer .thanks {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.footer .year {
+    margin-top: 15px;
+}
+.footer .three img {
+    width: 40px;
+    padding: 5px;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+}
+.footer .three img:hover {
+    transform: scale(1.2);
+}
+.footer .one p {
+    text-align: center;
+    font-size: 12px;
+}
+.footer .one .certifications {
+    font-size: 16px;
+}
+
+@media (max-width: 992px){
+.footer {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    padding-top: 15px;
+}
+.footer div {
+    max-width: none;
+}
+.footer .thanksDiv {
+    padding-left: 150px;
+    padding-right: 150px;
+}
+.footer .one p {
+    font-size: 12px;
+}
+.footer .two p {
+    font-size: 12px;
+}
+.footer .two .thanksDiv {
+    font-size: 10px;
+}
+.footer .three {
+    padding: 0;
+}
+.footer .three img {
+    margin-left: 0;
+}
+.footer .thanks {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+.two {
+    order: 3;
+}
+.three {
+    order: 2;
+}
+.footer .two div {
+    font-size: 10px;
+}
+.footer .year {
+    margin-bottom: 30px;
+    font-size: 10px;
+}
+}
+
+@media (max-width: 768px){
+.footer .thanks {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+.footer .thanksDiv {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+}
