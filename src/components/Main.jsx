@@ -1,17 +1,25 @@
-import '../assets/styles/Main.css'
+import '../assets/styles/Main.css';
+import { saveAs } from 'file-saver';
 
 function Main() {
 
     function downloadCV() {
         const url = '/pdf/CV-Yordanni-Ortiz.pdf';
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = 'CV-Yordanni-Ortiz.pdf';
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        window.open(url, '_blank');
-      }
+        const fileName = 'CV-Yordanni-Ortiz.pdf';
+        fetch(url)
+            .then(response => {
+                if (!response.ok) throw new Error(response.statusText);
+                return response.blob();
+            })
+            .then(blob => {
+                saveAs(blob, fileName);
+                const fileUrl = URL.createObjectURL(blob);
+                window.open(fileUrl, '_blank');
+            })
+            .catch(error => {
+                console.error('Error al descargar el archivo:', error);
+            });
+    }
 
   return (
     <div className="main">
