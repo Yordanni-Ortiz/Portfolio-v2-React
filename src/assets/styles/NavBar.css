@@ -99,6 +99,20 @@
     rotate: 180deg;
 }
 
+
+  
+  .NavBarList.show {
+    /* Estilos para mostrar el navbar */
+    transform: translateY(-70%) !important;
+    transition: 0.5s ease-out;
+}
+  
+  .NavBarList.hide {
+    /* Estilos para ocultar el navbar */
+    transform: translateY(0%) !important;
+    transition: 1s ease-out;
+  }
+
 @media (max-width: 992px){
 .NavBar li {
     padding: 5px;

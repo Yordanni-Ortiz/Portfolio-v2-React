@@ -40,8 +40,8 @@ function Footer() {
         <div className='thanks'>
           Si deseas contactarme, puedes hacerlo a través de mi correo 
           electrónico <a href={mail} target='blank'>yordannimod@gmail.com</a> y 
-          también puedes seguirme en <a href={linkedIn} target='blank'>LinkedIn</a> 
-          para mantenerte informado sobre mis últimas actualizaciones y proyectos.
+          también puedes seguirme en <a href={linkedIn} target='blank'>LinkedIn</a> para 
+          mantenerte informado sobre mis últimas actualizaciones y proyectos.
         </div>
         <div className='year'>© 2023 - all rights reserved</div>
       </article>
