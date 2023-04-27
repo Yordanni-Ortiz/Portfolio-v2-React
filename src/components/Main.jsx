@@ -39,7 +39,7 @@ function Main() {
                 y de alta calidad. Me emociona estar al tanto de las últimas tendencias 
                 y avances en el mundo de la tecnología y aplicarlos en mi trabajo diario. 
                 Estoy constantemente buscando nuevos desafíos para crecer y mejorar mis 
-                habilidades como desarrollador
+                habilidades como desarrollador.
                 </p>
             </div>
             <button className='button gradient' onClick={downloadCV}>Descargar CV</button>
