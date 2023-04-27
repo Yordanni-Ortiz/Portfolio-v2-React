@@ -34,10 +34,12 @@ function Main() {
             <div className='presentation2'>
                 <h4>desarrollador web.</h4>
                 <p>
-                    Soy un apasionado programador con un gran deseo de seguir aprendiendo y creciendo 
-                    en mi carrera. Me he dedicado con disciplia a perfeccionar mis habilidades y adquirir
-                    conocimientos en una variedad de lenguajes de programación y tecnologías. Lo que
-                    me hace una excelente opción para reforzar tu plantilla laboral.
+                Soy un desarrollador web entusiasta y apasionado con la tecnología. 
+                Me encanta explorar nuevas herramientas y crear productos innovadores 
+                y de alta calidad. Me emociona estar al tanto de las últimas tendencias 
+                y avances en el mundo de la tecnología y aplicarlos en mi trabajo diario. 
+                Estoy constantemente buscando nuevos desafíos para crecer y mejorar mis 
+                habilidades como desarrollador
                 </p>
             </div>
             <button className='button gradient' onClick={downloadCV}>Descargar CV</button>
