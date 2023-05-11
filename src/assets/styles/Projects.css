@@ -129,6 +129,7 @@
     width: 50%
 }
 .projects .lineEffect {
+    margin-left: 2px;
     width: 250px;
     height: 205px;
     padding-left: 1%;

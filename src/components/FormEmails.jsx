@@ -44,7 +44,7 @@ function FormEmails() {
   };
 
   return (
-    <div style={{ minHeight: "65vh" }}>
+    <div className="container-emails">
       <Card className="mt-5 mx-auto card">
         <Card.Body >
           <Form onSubmit={handleSubmit(submit)}>

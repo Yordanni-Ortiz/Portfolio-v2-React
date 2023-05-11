@@ -2,6 +2,9 @@
     box-sizing: border-box;
     margin: 0;
 }
+.container-emails{
+        min-height: 65vh;
+}
 h1 {
     text-align: center;
     padding-bottom: 30px;
@@ -24,6 +27,9 @@ h1 {
 }
 
 @media (max-width: 768px){
+.container-emails {
+    min-height: 55vh;
+}
 .card {
     max-Width: 350px;
 }

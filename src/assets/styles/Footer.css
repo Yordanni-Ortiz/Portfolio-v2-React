@@ -113,6 +113,10 @@
 }
 
 @media (max-width: 768px){
+.footer {
+    padding-top: 5px;
+    margin-top: 25px;
+}
 .footer .thanks {
     padding-left: 60px;
     padding-right: 60px;

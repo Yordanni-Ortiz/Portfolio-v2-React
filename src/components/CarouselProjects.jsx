@@ -10,7 +10,9 @@ function CarouselProjects() {
   const Crud = "https://crud-yordanni-ortiz.netlify.app/"
 
   return (
-    <Carousel className='carouselContainer container slidesToShow={1} slidesToScroll={1}'>
+    <Carousel className='carouselContainer container slidesToShow={1} slidesToScroll={1}'
+    prevIcon={<i className="fas fa-chevron-left"></i>}
+    nextIcon={<i className="fas fa-chevron-right"></i>}>
       <Carousel.Item>
         <img
           className="d-block w-100 image"
