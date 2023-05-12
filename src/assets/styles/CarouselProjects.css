@@ -3,7 +3,7 @@
     margin: 0 auto;
 }
 .carouselContainer img {
-    border-radius: 20px;
+    border-radius: 15px;
 }
 .container {
     margin-top: 60px;
@@ -70,6 +70,9 @@ margin-top: 25%;
 .fa-chevron-left:hover, .fa-chevron-right:hover{
     font-size: 30px;
 }
+.carouselContainer img {
+    border-radius: 10px;
+}
 }
 
 @media (max-width: 768px) {
@@ -99,6 +102,9 @@ margin-top: 25%;
 }
 .fa-chevron-left:hover, .fa-chevron-right:hover{
     font-size: 20px;
+}
+.carouselContainer img {
+    border-radius: 5px;
 }
 }
 }
