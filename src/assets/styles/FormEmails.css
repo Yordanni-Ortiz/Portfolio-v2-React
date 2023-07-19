@@ -4,6 +4,7 @@
 }
 .container-emails {
     min-height: 65vh;
+    padding-top: 50px;
 }
 Form.Control {
     font-size: 1px !important;
@@ -16,11 +17,13 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 40px;
 }
 .card {
-    background-color: #180A2B !important;
-    border-radius: 10px !important;
+    background: linear-gradient(to top, rgba(8, 2, 30, 0.979), rgba(15, 2, 62, 0.979));
+    border-radius: 20px;
     max-Width: 650px;
+    padding: 30px 20px 30px 20px;
 }
 
 @media (max-width: 992px){
@@ -32,8 +35,10 @@ h1 {
 @media (max-width: 768px){
 .container-emails {
     min-height: 55vh;
+    margin-bottom: 100px;
 }
 .card {
     max-Width: 350px;
+    padding: 20px 5px 20px 5px;
 }
 }

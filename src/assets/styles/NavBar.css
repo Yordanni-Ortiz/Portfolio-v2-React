@@ -1,186 +1,356 @@
-.NavBar {
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(26, 11, 46, 0.8); /* Fondo semi-transparente */
-    transition: background-color 0.2s ease-out; /* Transición suave */
-    z-index: 2; /* Asegura que el navbar esté encima de otros elementos */
-  }
-.NavBar.scrolled {
-    background-color: rgba(26, 11, 46, 0); /* Fondo transparente */
+.nav-bar {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 11;
 }
-.NavBar.hidden {
+/* Background del nav-bar */
+.background{
+  position: absolute;
+  background: linear-gradient(to top, rgba(8, 2, 30, 0.979), rgba(15, 2, 62, 0.979));
+  transition: background-color 1s ease, opacity 1s ease; /* Agrega la transición para background-color y opacity */
+  width: 100%;
+  height: 100%;
+}
+/* Función HandleScroll reemplaza .background por .srcolled */
+.scrolled {
   opacity: 0;
-  visibility: hidden;
-  transform: translateY(-100%);
-}
-.NavBar.visible {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-.NavBarMenu .logo {
-    position: absolute;
-    width: 70px;
-    left: 0;
-    margin-top: 12px;
-    margin-left: 30px;
 }
 .logo {
-    transform-style: preserve-3d;
-    transform: rotateY(0deg);
-    transition: transform 0.5s ease-in-out;
-  }
+  position: absolute;
+  width: 50px;
+  left: 0;
+  top: 1;
+  margin-left: 40px;  
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+  transition: transform 0.5s ease-in-out;
+}
 .logo:hover {
-    transform: rotateY(360deg);
+  transform: rotateY(360deg);
 }
-.NavBar ul {
-    padding: 0;
-    z-index: 10;
-    margin-bottom: 0px;
+/* Switch inicia aquí */
+.rocker {
+  display: inline-block;
+  position: absolute;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: #888; /* color de letra del switch no selecionado */
+  width: 7em;
+  height: 4.5em;
+  overflow: hidden;
+  border-bottom-left-radius: 5%;
+  border-bottom-right-radius: 5%;
+  z-index: 99;
+  top: 12px;
+  right: 60px;
+} 
+.rocker::before {
+  content: "";
+  position: absolute;
+  top: 3em;
+  left: 0.5em;
+  right: 0.6em;
+  bottom: 0;
+  background-color: rgba(123, 118, 142, 0.979);
 }
-.NavBar li {
-    display: inline-block;
-    padding: 20px;
+/* Tamaño del rocker (switch) */
+.rocker-small {
+  font-size: 0.6em;
+  margin: 0px;
 }
-.NavBar .Options {
-    text-decoration-line: none;
-    color: #FFFFFF;
+.rocker input {
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
-.NavBar a {
-    display: block;
-    position: relative;
-    overflow: hidden;
+.switch-left,
+.switch-right {
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5em;
+  width: 3em;
+  transition: 0.2s;
+  user-select: none;
 }
-.NavBar a span:first-child {
-    display: inline-block;
-    padding: 10px;
-  }
-.NavBar a span:last-child {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: translateY(-100%);
+.switch-left {
+  height: 2.4em;
+  width: 2.75em;
+  left: 0.85em;
+  bottom: 0.4em;
+  background-color: #ddd;
+  transform: rotate(15deg) skewX(15deg);
 }
-.NavBar a span {
-    transition: transform 0.2s ease-out;
+.switch-right {
+  right: 0.5em;
+  bottom: 0;
+  background-color: #0084d0;
+  color: #fff;
 }
-.NavBar a:hover span:first-child {
-    transform: translateY(100%);
+.switch-left::before,
+.switch-right::before {
+  content: "";
+  position: absolute;
+  width: 0.4em;
+  height: 2.45em;
+  bottom: -0.45em;
+  background-color: #ccc;
+  transform: skewY(-65deg);
 }
-.NavBar a:hover span:last-child {
-    transform: none;
+.switch-left::before {
+  left: -0.4em;
 }
-/* NavToggle */
-.NavBar .NavToggle {
-    background: none;
-    border: none;
-    display: none;
+.switch-right::before {
+  right: -0.375em;
+  background-color: transparent;
+  transform: skewY(65deg);
 }
-.NavBar .NavToggleClose {
-    background: none;
-    border: none;
-    display: none;
+input:checked + .switch-left {
+  background-color: #0084d0;
+  color: #fff;
+  bottom: 0px;
+  left: 0.5em;
+  height: 2.5em;
+  width: 3em;
+  transform: rotate(0deg) skewX(0deg);
 }
-.NavBar .NavToggleClose i {
-    cursor: pointer;
-    transition: 0.5s;
+input:checked + .switch-left::before {
+  background-color: transparent;
+  width: 3.0833em;
 }
-.NavBar .NavToggleClose i:hover {
-    rotate: 180deg;
+input:checked + .switch-left + .switch-right {
+  background-color: #ddd;
+  color: #888;
+  bottom: 0.4em;
+  right: 0.9em;
+  height: 2.4em;
+  width: 2.75em;
+  transform: rotate(-15deg) skewX(-15deg);
 }
-
-
-  
-  .NavBarList.show {
-    /* Estilos para mostrar el navbar */
-    transform: translateY(-70%) !important;
-    transition: 0.5s ease-out;
+input:checked + .switch-left + .switch-right::before {
+  background-color: #ccc;
 }
-  
-  .NavBarList.hide {
-    /* Estilos para ocultar el navbar */
-    transform: translateY(0%) !important;
-    transition: 1s ease-out;
-  }
+/* Background del nav-bar activo después del scroll */
+.background-scroll-en{
+  position: fixed;
+  background: linear-gradient(to top, rgba(8, 2, 30, 0.979), rgba(15, 2, 62, 0.979));
+  border-radius: 0 0 20px 20px;
+  width: 680px;
+  height: 83px;
+}
+.background-scroll-es{
+  position: fixed;
+  background: linear-gradient(to top, rgba(8, 2, 30, 0.979), rgba(15, 2, 62, 0.979));
+  border-radius: 0 0 20px 20px;
+  width: 765px;
+  height: 83px;
+}
+.nav-bar li {
+  display: inline-block;
+  padding: 20px;
+}
+.nav-bar .options {
+  text-decoration-line: none;
+  color: #FFFFFF;
+}
+.nav-bar a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.nav-bar a span:first-child {
+  display: inline-block;
+  padding: 10px;
+}
+.nav-bar a span:last-child {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-100%);
+}
+.nav-bar a span {
+  transition: transform 0.2s ease-out;
+}
+.nav-bar a:hover span:first-child {
+  transform: translateY(100%);
+}
+.nav-bar a:hover span:last-child {
+  transform: none;
+}
+/* Nav toggle */
+.nav-toggle {
+  background: none;
+  border: none;
+  display: none;
+  transition: transform 0.5s ease-in-out;
+  transform-origin: center;
+}
+.nav-toggle:hover{
+  transform: rotate(180deg);
+}
+/* burger button */
+.burger-btn{
+  display: flex;
+  flex-direction: column;
+  width: 2rem;
+  height: 2.5rem;
+  border: 0;
+  background: transparent;
+  margin-top: 18px;
+}
+.burger-btn div:not(:last-child) {
+  margin-bottom: 4.8px;
+}
+.burger-btn div{
+  background-color: rgb(254, 254, 254);
+  height: 2.5px;
+  width: 100%;
+  border-radius: 5px;
+  transition: all 0.5s;
+  transform-origin: center;
+}
+.burger-btn.clicked div:nth-child(1) {
+  transform: translateY(7.2px) rotate(45deg);
+}
+.burger-btn.clicked div:nth-child(2) {
+  opacity: 0;
+}
+.burger-btn.clicked div:nth-child(3) {
+  transform: translateY(-7.2px) rotate(-45deg);
+}
 
 @media (max-width: 992px){
-.NavBar li {
-    padding: 5px;
-    font-size: 15px;
+.nav-bar li {
+  padding: 5px;
+  font-size: 15px;
 }
-.NavBar .logo {
-    top: 0;
-    margin-top: 10px;
-    width: 40px;
+.nav-bar .logo {
+  top: 0;
+  width: 40px;
+  margin-top: 6px;
+  margin-left: 30px;
+}
+.background-scroll-en{
+  border-radius: 0 0 10px 10px;
+  width: 505px;
+  height: 53px;
+  margin-left: 0;
+}
+.background-scroll-es{
+  border-radius: 0 0 10px 10px;
+  width: 590px;
+  height: 53px;
+  margin-left: 0;
+}
+.rocker{
+  top: 5px;
+  right: 35px;
+}
+.rocker-small {
+  font-size: 0.45em; /* Tamaño del rocker (switch) */
+}
+input:checked + .switch-left + .switch-right {
+  right: 0.8em;
 }
 }
 
 @media (max-width: 768px){
-.NavBar {
-    display: flex;
-    justify-content: flex-end;
-    height: 50px;
+.nav-bar {
+  display: flex;
+  justify-content: flex-end;
+  height: 50px;
 }
-.NavBar .logo {
-    margin-top: 8px;
-    width: 40px;
+.background{
+  background: none;
 }
-.NavList {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 20px;
-    background-color: #201134f2;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 50%;
-    padding: 20px 0;
-    height: calc(100% - 60px);
-    transform: translateX(0); /* transicion para esconder en nav */
-    transition: 0s;
-    overflow-y: auto;
-    left: 100%;
+.logo {
+  margin-top: 6px;
+  width: 45px;
 }
-.NavList.Open {
-    transform: translateX(-100%) !important;
-    transition: 0.5s ease-out;
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+  background-image: linear-gradient(to top, rgba(8, 2, 30, 0.979), rgba(15, 2, 62, 0.979));
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: calc(100% - 40px);
+  transform: translateX(0); /* transicion para esconder en nav */
+  transition: 0s;
+  overflow-y: auto;
+  left: 100%;
+  z-index: 20;
 }
-.NavList.Close {
-    transform: translateX(100%) !important;
-    transition: 1s ease-out;
+.nav-list.Open {
+  transform: translateX(-100%) !important;
+  transition: 0.5s ease-out;
 }
-.NavBar .NavToggleClose {
-    display: block;
-    font-size: 25px;
-    margin-top: 5px;
-    margin-left: 75%;
+.nav-list.Close {
+  transform: translateX(100%) !important;
+  transition: 1s ease-out;
 }
-.NavBar .NavToggle {
-    display: block;
-    font-size: 20px;
-    margin-top: 5px;
-    margin-right: 30px;
-    z-index: 10;
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.539);
+  z-index: 1;
+  display: none;
 }
-.NavBar .NavToggle i {
-    cursor: pointer;
-    transition: 0.5s;
+.overlay.show {
+  display: block;
 }
-.NavBar .NavToggle i:hover {
-    rotate: 180deg;
+.rocker{  
+  top: 325px;
+  left: 50%;
+  transform: translateX(-50%);
 }
-.NavBar .NavToggle.Open {
-    display: none;
+.rocker-small {
+  font-size: 0.55em; /* Tamaño del rocker (switch) */
+}
+input:checked + .switch-left + .switch-right {
+  right: 0.9em;
+}
+.switch-right {
+  right: 0.6em;
+}
+/* Estilo del borde del menú hamburguesa */
+.background-scroll-en{
+  border-radius: 0;
+  width: 100%;
+  margin-left: 0;
+}
+.background-scroll-es{
+  border-radius: 0;
+  width: 100%;
+}
+.options{
+  top: 60px;
+} 
+.nav-toggle {
+  display: block;
+  font-size: 20px;
+  margin-top: 5px;
+  margin-right: 30px;
+  z-index: 21;
 }
 }

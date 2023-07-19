@@ -1,72 +1,121 @@
-import { useState, useEffect } from 'react';
-import '../assets/styles/NavBar.css';
+import { useContext, useState, useEffect } from "react";
+import { LanguageContext } from "../components/LanguageContext";
+import "../assets/styles/NavBar.css";
 
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
+  const [showOverlay, setShowOverlay] = useState(false);
+  const { isEnglish, toggleLanguage } = useContext(LanguageContext);
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleScroll = () => {
-    const navbar = document.querySelector('.NavBar');
+    const navBar = document.querySelector(".background");
     const scrolled = window.scrollY > 0;
-    navbar.classList.toggle('scrolled', scrolled);
+    navBar.classList.toggle("scrolled", scrolled);
   };
 
   const handleClick = () => {
-    setIsOpen(false);
+    setIsOpen(!isOpen);
+    setIsClicked(!isClicked);
+    setShowOverlay(!showOverlay);
+  };
+
+  const handleLanguageClick = (language) => {
+    if ((language === "en" && !isEnglish) || (language === "es" && isEnglish)) {
+      toggleLanguage();
+    }
   };
 
   return (
-    <div className="NavBar">
-      <ul className="NavBarMenu">
-        <img className="logo" src="/hlj.png" alt="" />
-        <div className="NavBarList">
-          <div className={`NavList ${isOpen ? 'Open' : 'Close'}`}>
-            <div className="NavToggleClose" onClick={() => setIsOpen(false)}>
-              <i className="fa-solid fa-xmark"></i>
-            </div>
-            <li>
-              <a href="#Home" className="Options navHome" onClick={handleClick}>
-                <span>Home</span> 
-                <span>
-                  <i className="fa-solid fa-house-chimney" aria-hidden="true"></i>
-                </span>
-              </a>
-            </li>
-            <li>
-              <a href="#AboutMe" className="Options navAboutMe" onClick={handleClick}>
-                <span>About Me</span>
-                <span>
-                  <i className="fas fa-address-card" aria-hidden="true"></i>
-                </span>
-              </a>
-            </li>
-            <li>
-              <a href="#ComputerSkills" className="Options navComputerSkills" onClick={handleClick}>
-                <span>Computer Skills</span> 
-                <span><i className="fa-solid fa-computer"></i></span>
-              </a>
-            </li>
-            <li>
-              <a href="#Projects" className="Options navProjects" onClick={handleClick}>
-                <span>Projects</span>
-                <span><i className="fa-solid fa-briefcase"></i></span>
-              </a>
-            </li>
-            <li>
-              <a href="#Contact" className="Options navContact" onClick={handleClick}>
-                <span>Contact</span> 
-                <span><i className="fa-solid fa-envelope"></i></span>
-              </a>
-            </li>
-          </div>
-        </div>
-      </ul>
-      <div className={`NavToggle ${isOpen ? 'Open' : ''}`} onClick={() => setIsOpen(!isOpen)}>
-        <i className="fa-solid fa-bars"></i>
+    <div className="nav-bar">
+      <div className={`overlay ${showOverlay ? "show" : ""}`} />
+      <article className="background" />
+      <img className="logo" src="/yordLogo.png" alt="" />
+      <div className={`nav-list ${isOpen ? "Open" : "Close"}`}>
+        <label className="rocker rocker-small">
+          <input
+            type="checkbox"
+            onChange={() => {
+              "en" ? "es" : "en";
+            }}
+          />
+          <span
+            className="switch-left"
+            onClick={() => handleLanguageClick("es")}
+            disabled={!isEnglish}
+          >
+            ES
+          </span>
+          <span
+            className="switch-right"
+            onClick={() => handleLanguageClick("en")}
+            disabled={isEnglish}
+          >
+            EN
+          </span>
+        </label>
+        <article
+          className={
+            isEnglish ? "background-scroll-en" : "background-scroll-es"
+          }
+        />
+        <li>
+          <a href="#Home" className="options" onClick={handleClick}>
+            <span>{isEnglish ? "Home" : "Inicio"}</span>
+            <span>
+              <i className="fa-solid fa-house-chimney" aria-hidden="true"></i>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#AboutMe" className="options" onClick={handleClick}>
+            <span>{isEnglish ? "About Me" : "Sobre Mí"}</span>
+            <span>
+              <i className="fas fa-address-card" aria-hidden="true"></i>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#ComputerSkills" className="options" onClick={handleClick}>
+            <span>
+              {isEnglish ? "Computer Skills" : "Habilidades Informáticas"}
+            </span>
+            <span>
+              <i className="fa-solid fa-computer"></i>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#Projects" className="options" onClick={handleClick}>
+            <span>{isEnglish ? "Projects" : "Proyectos"}</span>
+            <span>
+              <i className="fa-solid fa-briefcase"></i>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#Contact" className="options" onClick={handleClick}>
+            <span>{isEnglish ? "Contact" : "Contacto"}</span>
+            <span>
+              <i className="fa-solid fa-envelope"></i>
+            </span>
+          </a>
+        </li>
+      </div>
+      <div className={`nav-toggle ${isOpen ? "Open" : ""}`}>
+        <button
+          className={`burger-btn ${isClicked ? "clicked" : ""}`}
+          onClick={handleClick}
+        >
+          <div></div>
+          <div></div>
+          <div></div>
+        </button>
       </div>
     </div>
   );

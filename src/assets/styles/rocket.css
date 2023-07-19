@@ -1,0 +1,81 @@
+.toTop{
+  position: fixed;
+  bottom: 10%;
+  right: 2%;
+  z-index: 9999;
+}
+.rocket-box{
+  position: absolute;
+  height: 150px;
+}
+.rocket-link{ 
+  position: fixed;
+  bottom: 6%;
+  right: 0;
+  transform: translateX(-50%);
+  cursor: pointer;
+  transition: all 2.5s;
+}
+.rocket img{
+  width: 80px;
+  z-index: 10000;
+}
+.rocket::before{
+  content: '';
+  position: absolute;
+  top: 90%;
+  left: 50.5%;
+  transform: translateX(-46%);
+  height: 0px;
+  width: 18px;
+  background: linear-gradient(rgb(74, 180, 255),rgb(17, 9, 162), transparent);
+  transition: all 2.5s;
+}
+.rocket::after{
+  content: '';
+  position: absolute;
+  top: 90%;
+  left: 55%;
+  transform: translateX(-50%);
+  height: 0px;
+  width: 25px;
+  background: linear-gradient(rgb(74, 180, 255),rgb(17, 9, 162), transparent);
+  filter: blur(15px);
+  transition: all 2.5s;
+}
+.rocket-link.active{
+  bottom: 10%;
+}
+.rocket-link.active .rocket{
+  animation: movement 0.2s 2s ease infinite;
+}
+.rocket-link.active .rocket::before{
+  height: 220px;
+}
+.rocket-link.active .rocket::after{
+  height: 300px;
+}
+@keyframes movement{
+  0%, 100%{
+      transform: translateY(-2px);
+  }
+  50%{
+      transform: translateY(2px);
+  }
+}
+@media (max-width: 992px) {
+  .rocket-box{
+    height: 380px;
+  }
+  .rocket img{
+    width: 65px;
+  }
+}
+@media (max-width: 768px) {
+  .rocket-box{
+    height: 320px;
+  }
+  .rocket img{
+    width: 50px;
+  }
+}

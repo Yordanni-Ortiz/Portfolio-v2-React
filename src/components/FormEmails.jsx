@@ -1,16 +1,12 @@
 import { useState } from "react";
-import {
-  Button,
-  Card,
-  Col,
-  Form,
-  Row,
-} from "react-bootstrap";
+import { Button, Card, Col, Form, Row } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import { useContext } from "react";
+import { LanguageContext } from "./LanguageContext";
 import LoadingScreen from "./LoadingScreen";
 import Notification from ".//Notification";
 import axios from "../utils/axios";
-import '../assets/styles/FormEmails.css';
+import "../assets/styles/FormEmails.css";
 
 function FormEmails() {
   const [isLoading, setIsLoading] = useState(false);
@@ -20,6 +16,7 @@ function FormEmails() {
     message: "",
   });
   const { register, handleSubmit, reset } = useForm();
+  const { isEnglish } = useContext(LanguageContext);
 
   const submit = (data) => {
     setIsLoading(true);
@@ -44,23 +41,32 @@ function FormEmails() {
   };
 
   return (
-    <div className="container-emails">
-      <Card className="mt-5 mx-auto card">
-        <Card.Body >
+    <div className="container-emails" id="Contact">
+      <Card className="mt-5 mx-auto card" data-aos="fade-right">
+        <Card.Body>
           <Form onSubmit={handleSubmit(submit)}>
-            <h1  id='Contact' >Contact</h1>
+            <h1>{isEnglish ? "Contact" : "Contacto"}</h1>
             <Row>
               <Col>
                 <Form.Group className="mb-3" controlId="name">
-                  <Form.Label>Name</Form.Label>
-                  <Form.Control placeholder="John Doe" {...register("name")} required={true}/>
+                  <Form.Label>{isEnglish ? "Name" : "Nombre"}</Form.Label>
+                  <Form.Control
+                    className="custom-placeholder"
+                    style={{ backgroundColor: "#000000", color: "white" }}
+                    placeholder="John Doe"
+                    {...register("name")}
+                    required={true}
+                  />
                 </Form.Group>
               </Col>
               <Col>
                 <Form.Group className="mb-3" controlId="phone">
-                  <Form.Label>Phone</Form.Label>
+                  <Form.Label>{isEnglish ? "Phone" : "Teléfono"}</Form.Label>
                   <Form.Control
                     type="tel"
+                    pattern="[0-9]*"
+                    className="custom-placeholder"
+                    style={{ backgroundColor: "#000000", color: "white" }}
                     placeholder="123456789"
                     {...register("phone")}
                     required={true}
@@ -69,29 +75,40 @@ function FormEmails() {
               </Col>
             </Row>
             <Form.Group className="mb-3" controlId="email">
-              <Form.Label>Email address</Form.Label>
+              <Form.Label>
+                {isEnglish ? "Email" : "Correo electrónico"}
+              </Form.Label>
               <Form.Control
                 type="email"
-                placeholder="name@example.com"
+                className="custom-placeholder"
+                style={{ backgroundColor: "#000000", color: "white" }}
+                placeholder={
+                  isEnglish ? "name@example.com" : "nombre@ejemplo.com"
+                }
                 {...register("email")}
                 required={true}
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="message">
-              <Form.Label>Message</Form.Label>
+              <Form.Label>{isEnglish ? "Message" : "Mensaje"}</Form.Label>
               <Form.Control
                 as="textarea"
-                placeholder="¡Hola! Me gustaría tener una entrevista contigo..."
+                className="custom-placeholder"
+                style={{ backgroundColor: "#000000", color: "white" }}
+                placeholder={
+                  isEnglish
+                    ? "Hello! I would like to have an interview with you..."
+                    : "¡Hola! Me gustaría tener una entrevista contigo..."
+                }
                 {...register("message")}
                 required={true}
               />
             </Form.Group>
             <div className="button">
-                <Button variant="success" type="submit">
-                    Submit
-                </Button>
+              <Button variant="primary" type="submit">
+                {isEnglish ? "Submit" : "Enviar"}
+              </Button>
             </div>
-           
           </Form>
         </Card.Body>
       </Card>
