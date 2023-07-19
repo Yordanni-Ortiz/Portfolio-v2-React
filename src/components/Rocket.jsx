@@ -22,7 +22,7 @@ const Rocket = () => {
           onClick={handleClick}
         >
           <div className="rocket">
-            <img src="/public/cohete.png" alt="rocket" />
+            <img src="/cohete.png" alt="rocket" />
           </div>
         </div>
       </Link>
