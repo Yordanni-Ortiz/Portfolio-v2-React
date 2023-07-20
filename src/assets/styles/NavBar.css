@@ -144,14 +144,14 @@ input:checked + .switch-left + .switch-right::before {
   position: fixed;
   background: linear-gradient(to top, rgba(8, 2, 30, 0.979), rgba(15, 2, 62, 0.979));
   border-radius: 0 0 20px 20px;
-  width: 680px;
+  width: 590px;
   height: 83px;
 }
 .background-scroll-es{
   position: fixed;
   background: linear-gradient(to top, rgba(8, 2, 30, 0.979), rgba(15, 2, 62, 0.979));
   border-radius: 0 0 20px 20px;
-  width: 765px;
+  width: 660px;
   height: 83px;
 }
 .nav-bar li {
@@ -246,7 +246,7 @@ input:checked + .switch-left + .switch-right::before {
 }
 .background-scroll-en{
   border-radius: 0 0 10px 10px;
-  width: 505px;
+  width: 422px;
   height: 53px;
   margin-left: 0;
 }

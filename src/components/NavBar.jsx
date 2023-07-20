@@ -83,7 +83,7 @@ function NavBar() {
         <li>
           <a href="#ComputerSkills" className="options" onClick={handleClick}>
             <span>
-              {isEnglish ? "Computer Skills" : "Habilidades Informáticas"}
+              {isEnglish ? "Skills" : "Habilidades"}
             </span>
             <span>
               <i className="fa-solid fa-computer"></i>

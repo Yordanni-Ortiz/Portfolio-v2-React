@@ -12,7 +12,7 @@ function Skills() {
         data-aos-anchor-placement="center-bottom"
         className="computer-skills-text"
       >
-        {isEnglish ? "Computer Skills" : "Habilidades Informáticas"}
+        {isEnglish ? "Skills" : "Habilidades"}
       </h2>
 
       <section className="skills-section">
