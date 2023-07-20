@@ -25,17 +25,14 @@
   justify-content: center;
   align-items: center;
 }
-.footer p {
-  margin-bottom: 0;
-}
 .footer a:hover {
   color: rgb(89, 49, 125);
 }
 .footer .academlo {
   color: #e84959;
 }
-.footer .one .academlo:hover {
-  color: rgb(241, 133, 143);
+.footer .academlo:hover {
+  color: rgb(175, 32, 46);
 }
 .footer div {
   text-align: center;
