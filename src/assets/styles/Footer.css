@@ -77,18 +77,11 @@
   .footer div {
     max-width: none;
   }
-  .footer .thanksDiv {
-    padding-left: 150px;
-    padding-right: 150px;
-  }
   .footer .one p {
     font-size: 12px;
   }
   .footer .two p {
     font-size: 12px;
-  }
-  .footer .two .thanksDiv {
-    font-size: 10px;
   }
   .footer .three {
     padding: 0;
@@ -97,8 +90,8 @@
     margin-left: 0;
   }
   .footer .thanks {
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 140px;
+    padding-right: 140px;
   }
   .two {
     order: 3;
@@ -121,17 +114,13 @@
     margin-top: 25px;
   }
   .footer .thanks {
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 55px;
+    padding-right: 55px;
   }
   .footer .second {
     padding-bottom: 30px;
   }
   .footer .year {
     padding-bottom: 15px;
-  }
-  .footer .thanksDiv {
-    padding-left: 60px;
-    padding-right: 60px;
   }
 }
