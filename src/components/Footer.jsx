@@ -2,7 +2,7 @@ import "../assets/styles/Footer.css";
 import linkedin from "../../public/linkedin.png";
 import whatsapp from "../../public/whatsapp.png";
 import gmail from "../../public/gmail.png";
-import github from "../../public/Git-Hub.png";
+import github from "../../public/github.png";
 import { useContext } from "react";
 import { LanguageContext } from "./LanguageContext";
 
