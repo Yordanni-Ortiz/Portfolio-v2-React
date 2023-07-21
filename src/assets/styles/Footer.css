@@ -48,13 +48,16 @@
   margin-top: 15px;
 }
 .footer .three img {
-  width: 40px;
+  width: 45px;
   padding: 5px;
-  margin-left: 10px;
+  margin: 0 5px 5px 0;
   transition: all 0.3s ease;
 }
 .footer .three img:hover {
   transform: scale(1.2);
+}
+.three a .github {
+width: 47px;
 }
 .footer .one p {
   text-align: center;
@@ -82,9 +85,6 @@
   }
   .footer .three {
     padding: 0;
-  }
-  .footer .three img {
-    margin-left: 0;
   }
   .footer .thanks {
     padding-left: 140px;

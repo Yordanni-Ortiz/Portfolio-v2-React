@@ -2,7 +2,7 @@ import "../assets/styles/Footer.css";
 import linkedin from "../../public/linkedin.png";
 import whatsapp from "../../public/whatsapp.png";
 import gmail from "../../public/gmail.png";
-import instagram from "../../public/instagram.png";
+import github from "../../public/Git-Hub.png";
 import { useContext } from "react";
 import { LanguageContext } from "./LanguageContext";
 
@@ -12,7 +12,7 @@ function Footer() {
   const mail =
     "https://mail.google.com/mail/u/0/?view=cm&fs=1&to=yordannimod@gmail.com";
   const linkedIn = "https://www.linkedin.com/in/yordanni-ortiz/";
-  const instaGram = "https://www.instagram.com/yordanni.ortiz/";
+  const GitHub = "https://github.com/Yordanni-Ortiz";
   const JavaScript =
     "https://certificates.academlo.com/en/verify/62771454024266";
   const React = "https://certificates.academlo.com/en/verify/92594742451940";
@@ -116,8 +116,8 @@ function Footer() {
           <a href={mail} target="blank">
             <img src={gmail} alt="" />
           </a>
-          <a href={instaGram} target="blank">
-            <img src={instagram} alt="" />
+          <a href={GitHub} target="blank">
+            <img className="github" src={github} alt="" />
           </a>
         </div>
       </article>
