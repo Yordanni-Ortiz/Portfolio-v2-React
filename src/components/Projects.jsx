@@ -1,9 +1,36 @@
 import "../assets/styles/Projects.css";
-import { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { LanguageContext } from "./LanguageContext";
 
 function Projects() {
   const { isEnglish } = useContext(LanguageContext);
+
+  const [number1, setNumber1] = useState(0);
+  const [number2, setNumber2] = useState(0);
+  const [number3, setNumber3] = useState(0);
+
+  useEffect(() => {
+    const target1 = 600;
+    const target2 = 12;
+    const target3 = 5;
+    const duration = 7000;
+    const startTime = Date.now();
+
+    const animateNumbers = () => {
+      const currentTime = Date.now() - startTime;
+      const progress = Math.min(1, currentTime / duration);
+
+      setNumber1(Math.floor(progress * target1));
+      setNumber2(Math.floor(progress * target2));
+      setNumber3(Math.floor(progress * target3));
+
+      if (currentTime < duration) {
+        requestAnimationFrame(animateNumbers);
+      }
+    };
+
+    requestAnimationFrame(animateNumbers);
+  }, []);
 
   return (
     <div id="Projects" className="projects">
@@ -14,47 +41,36 @@ function Projects() {
       >
         {isEnglish ? "Projects" : "Proyectos"}
       </h2>
-      <article className="descriptions" data-aos="fade-up">
-        <div
-          className="line-effect"
-          data-aos="fade-right"
-          style={{ "--clr": "#0060ff", "--i": 0 }}
-        >
-          <div className="container">
-            <p className="titulo">POKÉDEX</p>
-            <p className="subtitulo">
-              {isEnglish
-                ? "I developed a Pokédex with React and Redux that allows users to search and filter Pokémon by type, as well as see details about each one, with an optimal interface to improve the user experience. The app is connected to an API that provides information about the Pokémon"
-                : "Desarrollé una Pokédex con React y Redux que permite a los usuarios buscar y filtrar Pokémon por tipo, así como ver detalles sobre cada uno, con una interfas optima para mejorar la experiencia del usuario. La app está conectada a una API que proporciona información sobre los Pokémon."}
+
+      <div className="container-descriptions">
+        <div className="line-style" data-aos="fade-right">
+          <div className="card-description">
+            <img src="/Study.gif" alt="Study" className="gif" />
+            <p className="number">+ {number1}</p>
+            <p className="text-description">
+              {isEnglish ? "Study hours" : "Horas de estudio"}
             </p>
           </div>
         </div>
-        <div
-          className="line-effect"
-          data-aos="flip-right"
-          data-aos-easing="ease-out-cubic"
-          data-aos-duration="500"
-        >
-          <div className="container">
-            <p className="titulo">ECOMMERCE</p>
-            <p className="subtitulo">
-              {isEnglish
-                ? "This Ecommerce is a web application that allows registered users to search for products and add them to a shopping cart. The front-end is developed with React and Redux, and the back-end is built with Node.js and Express, and uses Sequelize as an ORM to interact with the database."
-                : "Este Ecommerce es una aplicación web que permite a los usuarios registrados buscar productos y agregarlos a un carrito de compras. El front-end stá desarrollado con React y Redux, y el back-end está construido con Node.js y Express, y utiliza Sequelize como ORM para interactuar con la base de datos."}
+        <div className="line-style" data-aos="flip-right">
+          <div className="card-description">
+            <img src="/Technology.gif" alt="Technologies" className="gif" />
+            <p className="number">+ {number2}</p>
+            <p className="text-description">
+              {isEnglish ? "Technologies used" : "Tecnologías utilizadas"}
             </p>
           </div>
         </div>
-        <div className="line-effect" data-aos="fade-left">
-          <div className="container">
-            <p className="titulo">CRUD</p>
-            <p className="subtitulo">
-              {isEnglish
-                ? "In this React application, I developed a CRUD function that allows creating, reading, updating, and deleting products for an online store. The application can connect to a robust database or a scalable API that enables performing these operations on the stored data."
-                : "En esta aplicación de React desarrollé una función CRUD que permite crear, leer, actualizar y eliminar productos para una tienda en línea. La aplicación puede conectarse a una robusta base de datos o a una API escalable que permita realizar estas operaciones en los datos almacenados."}
+        <div className="line-style" data-aos="fade-left">
+          <div className="card-description">
+            <img src="/Project.gif" alt="Projects" className="gif" />
+            <p className="number">+ {number3}</p>
+            <p className="text-description">
+              {isEnglish ? "Completed projects" : "Proyectos culminados"}
             </p>
           </div>
         </div>
-      </article>
+      </div>
     </div>
   );
 }
