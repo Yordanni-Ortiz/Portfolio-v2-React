@@ -24,11 +24,11 @@ function Home() {
         <span className="first-span" data-aos="fade-left">
           {isEnglish ? " FULL - STACK " : "DESARROLLADOR"}
         </span>
-        <span className="second-span" >
+        <span className="second-span" data-aos="fade-left">
           {isEnglish ? (
-            <h2 className="second-span-english" data-aos="fade-left">DEVELOPER</h2>
+            <h2 className="second-span-english">DEVELOPER</h2>
           ) : (
-            <h2 className="second-span-spanish" data-aos="fade-left">FULL - STACK</h2>
+            <h2 className="second-span-spanish">FULL - STACK</h2>
           )}
         </span>
       </h2>
