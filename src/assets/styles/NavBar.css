@@ -252,7 +252,7 @@ input:checked + .switch-left + .switch-right::before {
 }
 .background-scroll-es{
   border-radius: 0 0 10px 10px;
-  width: 590px;
+  width: 490px;
   height: 53px;
   margin-left: 0;
 }
