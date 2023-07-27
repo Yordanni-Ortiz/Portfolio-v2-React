@@ -100,6 +100,129 @@
   margin-top: -15px;
 }
 
+.box-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  top: 100px;
+  margin-bottom: 140px;
+}
+.project-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 100px 50px;
+}
+.project-container .card {
+  position: relative;
+  width: 450px;
+  height: 350px;
+  background: linear-gradient(
+    to top,
+    rgba(8, 2, 30, 0.979),
+    rgba(15, 2, 62, 0.979)
+  );
+  border-radius: 20px;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.507);
+  transition: 0.5s !important;
+}
+.project-container .card:hover {
+  height: 400px;
+}
+.project-container .card .imgBx {
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  width: 400px;
+  height: 220px;
+  background: #333;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.5s;
+  align-items: center;
+}
+.project-container .card:hover .imgBx {
+  top: -100px;
+  scale: 0.75;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.377);
+}
+.project-container .card .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.project-container .card .content {
+  position: absolute;
+  top: 252px;
+  width: 90%;
+  height: 40px;
+  overflow: hidden;
+  text-align: center;
+  transition: 0.5s;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+.project-container .card:hover .content {
+  top: 90px;
+  height: 250px;
+}
+.project-container .card .content h2 {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: var(--clr);
+}
+.project-container .card .content p {
+  color: #fdfdfd;
+}
+.project-container .card .content .icons-container {
+  margin-top: -20px;
+}
+.project-container .card .content a {
+  position: relative;
+  top: 15px;
+  display: inline-block;
+  padding: 12px 25px;
+  cursor: default;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 8px;
+}
+#icon-web {
+  font-size: 35px;
+  cursor: pointer;
+  transition: 1s;
+  color: var(--clr);
+}
+#icon-web:hover {
+  transform: scale(1.2);
+  transition: 1s;
+}
+#icon-github {
+  font-size: 40px;
+  cursor: pointer;
+  transition: 1s;
+  color: var(--clr);
+}
+#icon-github:hover {
+  transform: scale(1.2);
+  transition: 1s;
+}
+i p {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--clr) !important;
+}
+
 @media (max-width: 1200px) {
   .container-descriptions {
     padding: 0;
@@ -157,6 +280,61 @@
   }
   .text-description {
     font-size: 12px;
+  }
+  .project-container .card .imgBx {
+    top: 20px;
+    left: 25px;
+    width: 300px;
+    height: 180px;
+    background: #333;
+  }
+  .project-container .card .content h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+  }
+  .project-container .card .content h2:hover {
+    top: 100px;
+  }
+  .project-container .card .content p {
+    font-size: 0.75em;
+  }
+  .project-container .card .content a {
+    padding: 12px 25px;
+    font-weight: 500;
+    border-radius: 8px;
+    width: 130px;
+    font-size: 11px;
+    margin-top: -20px;
+  }
+  .project-container .card .content {
+    top: 65%;
+  }
+  .project-container .card {
+    height: 300px;
+    border-radius: 20px;
+  }
+  .project-container .card:hover .content {
+    top: 80px; /* Altura del texto */
+  }
+  .project-container .card:hover {
+    height: 350px;
+  }
+  .project-container .card:hover .imgBx {
+    top: -75px; /* Altura de imagen */
+  }
+  .project-container .card .content .icons-container {
+    margin-top: 0;
+  }
+  #icon-web {
+    font-size: 25px;
+  }
+  #icon-github {
+    font-size: 30px;
+  }
+  i p {
+    margin-top: 10px;
+    font-size: 17px !important;
+    font-weight: 400;
   }
 }
 

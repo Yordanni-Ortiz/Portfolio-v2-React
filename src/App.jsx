@@ -6,7 +6,6 @@ import Home from "./components/Home";
 import AboutMe from "./components/AboutMe"
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
-import CarouselProjects from "./components/CarouselProjects";
 import FormEmails from "./components/FormEmails";
 import Rocket from "./components/Rocket";
 import Footer from "./components/Footer";
@@ -31,7 +30,6 @@ function App() {
           <AboutMe />
           <Skills />
           <Projects />
-          <CarouselProjects />
           <FormEmails />
           <Rocket />
           <Footer />
