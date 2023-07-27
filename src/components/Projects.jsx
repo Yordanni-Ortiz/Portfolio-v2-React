@@ -1,4 +1,5 @@
 import "../assets/styles/Projects.css";
+import CarouselProjects from "./CarouselProjects";
 import React, { useContext, useState, useEffect } from "react";
 import { LanguageContext } from "./LanguageContext";
 
