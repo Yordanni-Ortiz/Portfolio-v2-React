@@ -133,7 +133,7 @@
 .project-container .card:hover {
   height: 400px;
 }
-.project-container .card .imgBx {
+.project-container .card .videoBx {
   position: absolute;
   top: 20px;
   left: 25px;
@@ -145,12 +145,12 @@
   transition: 0.5s;
   align-items: center;
 }
-.project-container .card:hover .imgBx {
+.project-container .card:hover .videoBx {
   top: -100px;
   scale: 0.75;
   box-shadow: 0 15px 45px rgba(0, 0, 0, 0.377);
 }
-.project-container .card .imgBx img {
+.project-container .card .videoBx video {
   position: absolute;
   top: 0;
   left: 0;
@@ -281,7 +281,7 @@ i p {
   .text-description {
     font-size: 12px;
   }
-  .project-container .card .imgBx {
+  .project-container .card .videoBx {
     top: 20px;
     left: 25px;
     width: 300px;
@@ -319,7 +319,7 @@ i p {
   .project-container .card:hover {
     height: 350px;
   }
-  .project-container .card:hover .imgBx {
+  .project-container .card:hover .videoBx {
     top: -75px; /* Altura de imagen */
   }
   .project-container .card .content .icons-container {

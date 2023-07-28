@@ -1,7 +1,12 @@
 import "../assets/styles/Projects.css";
 import CarouselProjects from "./CarouselProjects";
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState, useEffect, useRef } from "react";
 import { LanguageContext } from "./LanguageContext";
+import electronicShop from "/EletronicsShop.mp4";
+import pokeApp from "/PokeApp.mp4";
+import crudStore from "/CrudStore.mp4";
+import randomUsers from "/RandomUsers.mp4";
+import drinksApi from "/DrinksApi.mp4";
 
 function Projects() {
   const { isEnglish } = useContext(LanguageContext);
@@ -32,6 +37,14 @@ function Projects() {
 
     requestAnimationFrame(animateNumbers);
   }, []);
+
+  const videoRef = useRef(null);
+
+  const handleVideoEnded = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+  };
 
   return (
     <section>
@@ -83,12 +96,20 @@ function Projects() {
             data-aos="fade-right"
             data-aos-duration="1000"
           >
-            <div className="imgBx">
-              <img
+            <div className="videoBx">
+              <video
+                ref={videoRef}
                 className="project-img"
-                src="/ecommerceImage.png"
-                alt="picture"
-              />
+                width="400"
+                height="220"
+                autoPlay
+                loop
+                muted
+                onEnded={handleVideoEnded}
+              >
+                <source src={electronicShop} type="video/mp4" />
+                Tu navegador no admite el elemento de video.
+              </video>
             </div>
             <div className="content">
               <h2>ECOMMERCE</h2>
@@ -125,12 +146,20 @@ function Projects() {
             data-aos-duration="1000"
             data-aos-offset="100"
           >
-            <div className="imgBx">
-              <img
+            <div className="videoBx">
+              <video
+                ref={videoRef}
                 className="project-img"
-                src="pokedexImage.png"
-                alt="picture"
-              />
+                width="400"
+                height="220"
+                autoPlay
+                loop
+                muted
+                onEnded={handleVideoEnded}
+              >
+                <source src={pokeApp} type="video/mp4" />
+                Tu navegador no admite el elemento de video.
+              </video>
             </div>
             <div className="content">
               <h2>POKEAPP</h2>
@@ -166,9 +195,20 @@ function Projects() {
             data-aos="fade-left"
             data-aos-duration="1000"
           >
-            <div className="imgBx">
-              {" "}
-              <img className="project-img" src="crudImage.png" alt="picture" />
+            <div className="videoBx">
+              <video
+                ref={videoRef}
+                className="project-img"
+                width="400"
+                height="220"
+                autoPlay
+                loop
+                muted
+                onEnded={handleVideoEnded}
+              >
+                <source src={crudStore} type="video/mp4" />
+                Tu navegador no admite el elemento de video.
+              </video>
             </div>
             <div className="content">
               <h2>PRODUCTS CRUD</h2>
@@ -204,12 +244,20 @@ function Projects() {
             data-aos="fade-right"
             data-aos-duration="1000"
           >
-            <div className="imgBx">
-              <img
+            <div className="videoBx">
+              <video
+                ref={videoRef}
                 className="project-img"
-                src="/randomUsersImage.png"
-                alt="picture"
-              />
+                width="400"
+                height="220"
+                autoPlay
+                loop
+                muted
+                onEnded={handleVideoEnded}
+              >
+                <source src={randomUsers} type="video/mp4" />
+                Tu navegador no admite el elemento de video.
+              </video>
             </div>
             <div className="content">
               <h2>RANDOM USERS</h2>
@@ -245,12 +293,20 @@ function Projects() {
             data-aos="fade-left"
             data-aos-duration="1000"
           >
-            <div className="imgBx">
-              <img
+            <div className="videoBx">
+              <video
+                ref={videoRef}
                 className="project-img"
-                src="/drinksImage.png"
-                alt="picture"
-              />
+                width="400"
+                height="220"
+                autoPlay
+                loop
+                muted
+                onEnded={handleVideoEnded}
+              >
+                <source src={drinksApi} type="video/mp4" />
+                Tu navegador no admite el elemento de video.
+              </video>
             </div>
             <div className="content">
               <h2>DRINKS APP</h2>
