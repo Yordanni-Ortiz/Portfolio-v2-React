@@ -145,7 +145,7 @@
   font-family: "Nunito", sans-serif;
 }
 .cards-container .box:hover {
-  transform: translateY(-25px);
+  transform: translateY(-25px) !important;
 }
 .cards-container .box::before {
   content: "";
