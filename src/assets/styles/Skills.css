@@ -110,7 +110,9 @@
 .icon-supabase {
   width: 50px;
 }
-.icon-postman {
+.icon-postman,
+.icon-netlify,
+.icon-bootstrap {
   width: 55px;
 }
 .icon-react,
@@ -121,6 +123,12 @@
 .icon-github,
 .icon-git {
   width: 60px;
+}
+.icon-aos {
+  width: 90px;
+}
+.icon-axios{
+  width: 120px;
 }
 
 @media (max-width: 992px) {
@@ -147,7 +155,9 @@
   .icon-supabase {
     width: 40px;
   }
-  .icon-postman {
+  .icon-postman,
+  .icon-netlify,
+  .icon-bootstrap {
     width: 45px;
   }
   .icon-react,
@@ -159,12 +169,18 @@
   .icon-git {
     width: 50px;
   }
+  .icon-aos {
+    width: 70px;
+  }
+  .icon-axios{
+    width: 90px;
+  }
 }
 
 @media (max-width: 768px) {
   .computer-skills-container {
-    margin-top: 200px;
-    margin-bottom: 450px;
+    margin-top: 320px;
+    margin-bottom: 620px;
     height: 500px;
   }
 

@@ -18,6 +18,7 @@ function Skills() {
       <section className="skills-section">
         <div
           data-aos="fade-down-right"
+          data-aos-easing="ease-out-cubic"
           className="skills-box"
           style={{ "--clr": "#FF7816", "--i": 0, alignItems: "center" }}
         >
@@ -26,6 +27,7 @@ function Skills() {
         </div>
         <div
           data-aos="fade-down"
+          data-aos-easing="ease-out-cubic"
           className="skills-box"
           style={{ "--clr": "#0060ff", "--i": 0, alignItems: "center" }}
         >
@@ -34,6 +36,7 @@ function Skills() {
         </div>
         <div
           data-aos="fade-down"
+          data-aos-easing="ease-out-cubic"
           className="skills-box"
           style={{ "--clr": "#ffed00", "--i": 0, alignItems: "center" }}
         >
@@ -46,6 +49,7 @@ function Skills() {
         </div>
         <div
           data-aos="fade-down-left"
+          data-aos-easing="ease-out-cubic"
           className="skills-box"
           style={{ "--clr": "#00D8FF", "--i": 0, alignItems: "center" }}
         >
@@ -54,6 +58,7 @@ function Skills() {
         </div>
         <div
           data-aos="fade-right"
+          data-aos-easing="ease-out-cubic"
           className="skills-box"
           style={{ "--clr": "#4CAF50", "--i": 0, alignItems: "center" }}
         >
@@ -63,7 +68,6 @@ function Skills() {
         <div
           data-aos="flip-left"
           data-aos-easing="ease-out-cubic"
-          data-aos-duration="1000"
           className="skills-box"
           style={{ "--clr": "#FF6C37", "--i": 0, alignItems: "center" }}
         >
@@ -77,7 +81,6 @@ function Skills() {
         <div
           data-aos="flip-right"
           data-aos-easing="ease-out-cubic"
-          data-aos-duration="1000"
           className="skills-box"
           style={{ "--clr": "#03AFEF", "--i": 0, alignItems: "center" }}
         >
@@ -90,6 +93,7 @@ function Skills() {
         </div>
         <div
           data-aos="fade-left"
+          data-aos-easing="ease-out-cubic"
           className="skills-box"
           style={{ "--clr": "#306091", "--i": 0, alignItems: "center" }}
         >
@@ -101,7 +105,8 @@ function Skills() {
           <span>POSTGRESQL</span>
         </div>
         <div
-          data-aos="fade-up-right"
+          data-aos="fade-right"
+          data-aos-easing="ease-out-cubic"
           className="skills-box"
           style={{ "--clr": "#016089", "--i": 0, alignItems: "center" }}
         >
@@ -109,7 +114,8 @@ function Skills() {
           <span>MYSQL</span>
         </div>
         <div
-          data-aos="fade-up"
+          data-aos="flip-left"
+          data-aos-easing="ease-out-cubic"
           className="skills-box"
           style={{ "--clr": "#FFFFFF", "--i": 0, alignItems: "center" }}
         >
@@ -121,7 +127,8 @@ function Skills() {
           <span>GITHUB</span>
         </div>
         <div
-          data-aos="fade-up"
+          data-aos="flip-right"
+          data-aos-easing="ease-out-cubic"
           className="skills-box"
           style={{ "--clr": "#F4511E", "--i": 0, alignItems: "center" }}
         >
@@ -129,7 +136,8 @@ function Skills() {
           <span>GIT</span>
         </div>
         <div
-          data-aos="fade-up-left"
+          data-aos="fade-left"
+          data-aos-easing="ease-out-cubic"
           className="skills-box"
           style={{ "--clr": "#44D093", "--i": 0, alignItems: "center" }}
         >
@@ -139,6 +147,50 @@ function Skills() {
             alt="supabase icon"
           />
           <span>SUPABASE</span>
+        </div>
+        <div
+          data-aos="fade-up-right"
+          data-aos-easing="ease-out-cubic"
+          className="skills-box"
+          style={{ "--clr": "#25C7B7", "--i": 0, alignItems: "center" }}
+        >
+          <img className="icon icon-netlify" src="./netlify.png" alt="netlify icon" />
+          <span>NETLIFY</span>
+        </div>
+        <div
+          data-aos="fade-up"
+          data-aos-easing="ease-out-cubic"
+          className="skills-box"
+          style={{ "--clr": "#5A29E4", "--i": 0, alignItems: "center" }}
+        >
+          <img
+            className="icon icon-axios"
+            src="./axios.png"
+            alt="axios icon"
+          />
+          <span>AXIOS</span>
+        </div>
+        <div
+          data-aos="fade-up"
+          data-aos-easing="ease-out-cubic"
+          className="skills-box"
+          style={{ "--clr": "#54274C", "--i": 0, alignItems: "center" }}
+        >
+          <img className="icon icon-bootstrap" src="./bootstrap.png" alt="bootstrap icon" />
+          <span>BOOTSTRAP</span>
+        </div>
+        <div
+          data-aos="fade-up-left"
+          data-aos-easing="ease-out-cubic"
+          className="skills-box"
+          style={{ "--clr": "#1FA2ED", "--i": 0, alignItems: "center" }}
+        >
+          <img
+            className="icon icon-aos"
+            src="./aos.png"
+            alt="aos icon"
+          />
+          <span>AOS</span>
         </div>
       </section>
     </div>
