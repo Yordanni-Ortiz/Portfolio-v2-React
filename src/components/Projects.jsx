@@ -108,6 +108,7 @@ function Projects() {
                 onEnded={handleVideoEnded}
               >
                 <source src={electronicShop} type="video/mp4" />
+                <source src="video.webm" type="video/webm" />
                 Tu navegador no admite el elemento de video.
               </video>
             </div>
@@ -158,6 +159,7 @@ function Projects() {
                 onEnded={handleVideoEnded}
               >
                 <source src={pokeApp} type="video/mp4" />
+                <source src="video.webm" type="video/webm" />
                 Tu navegador no admite el elemento de video.
               </video>
             </div>
@@ -207,6 +209,7 @@ function Projects() {
                 onEnded={handleVideoEnded}
               >
                 <source src={crudStore} type="video/mp4" />
+                <source src="video.webm" type="video/webm" />
                 Tu navegador no admite el elemento de video.
               </video>
             </div>
@@ -256,6 +259,7 @@ function Projects() {
                 onEnded={handleVideoEnded}
               >
                 <source src={randomUsers} type="video/mp4" />
+                <source src="video.webm" type="video/webm" />
                 Tu navegador no admite el elemento de video.
               </video>
             </div>
@@ -305,6 +309,7 @@ function Projects() {
                 onEnded={handleVideoEnded}
               >
                 <source src={drinksApi} type="video/mp4" />
+                <source src="video.webm" type="video/webm" />
                 Tu navegador no admite el elemento de video.
               </video>
             </div>
