@@ -61,7 +61,7 @@ function AboutMe() {
       </div>
 
       <div className="cards-container">
-        <div className="box">
+        <div className="box" data-aos="fade-right">
           <span></span>
           <div className="content">
             <h2>{isEnglish ? "WHO AM I?" : "¿QUIÉN SOY YO?"}</h2>
@@ -73,7 +73,7 @@ function AboutMe() {
           </div>
         </div>
 
-        <div className="box">
+        <div className="box" data-aos="flip-right">
           <span></span>
           <div className="content">
             <h2>
@@ -87,7 +87,7 @@ function AboutMe() {
           </div>
         </div>
 
-        <div className="box">
+        <div className="box" data-aos="fade-left">
           <span></span>
           <div className="content">
             <h2 className="gettoknowme">
