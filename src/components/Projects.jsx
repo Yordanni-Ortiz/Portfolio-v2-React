@@ -17,8 +17,8 @@ function Projects() {
 
   useEffect(() => {
     const target1 = 600;
-    const target2 = 12;
-    const target3 = 5;
+    const target2 = 30;
+    const target3 = 10;
     const duration = 7000;
     const startTime = Date.now();
 
