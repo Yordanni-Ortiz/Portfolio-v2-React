@@ -4,9 +4,9 @@ import React, { useContext, useState, useEffect, useRef } from "react";
 import { LanguageContext } from "./LanguageContext";
 import electronicShop from "/EletronicsShop.mp4";
 import pokeApp from "/PokeApp.mp4";
-import crudStore from "/CrudStore.mp4";
+import productsCrud from "/ProductsCrud.mp4";
 import randomUsers from "/RandomUsers.mp4";
-import drinksApi from "/DrinksApi.mp4";
+import cocktailApp from "/CocktailApp.mp4";
 
 function Projects() {
   const { isEnglish } = useContext(LanguageContext);
@@ -208,7 +208,7 @@ function Projects() {
                 muted
                 onEnded={handleVideoEnded}
               >
-                <source src={crudStore} type="video/mp4" />
+                <source src={productsCrud} type="video/mp4" />
                 <source src="video.webm" type="video/webm" />
                 Tu navegador no admite el elemento de video.
               </video>
@@ -308,7 +308,7 @@ function Projects() {
                 muted
                 onEnded={handleVideoEnded}
               >
-                <source src={drinksApi} type="video/mp4" />
+                <source src={cocktailApp} type="video/mp4" />
                 <source src="video.webm" type="video/webm" />
                 Tu navegador no admite el elemento de video.
               </video>
