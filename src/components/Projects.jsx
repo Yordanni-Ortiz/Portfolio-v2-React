@@ -314,15 +314,15 @@ function Projects() {
               </video>
             </div>
             <div className="content">
-              <h2>DRINKS APP</h2>
+              <h2>COCKTAIL APP</h2>
               <p>
                 {isEnglish
-                  ? "Drinks App was built using Javascript, HTML, CSS, React, React-icons, Axios, and Netlify, making requests to a cocktails API for searching and filtering different types of cocktails, their ingredients, and descriptions."
-                  : "Drinks App fue construida utilizando Javascript, HTML, CSS, React, React-icons, Axios y Netlify haciendo peticiones a una API de cocteles para búsqueda y filtrado de los diferentes tipos de cocteles, sus ingredientes y descripción."}
+                  ? "Cocktail App was built using Javascript, HTML, CSS, React, React-icons, Axios, and Netlify, making requests to a cocktails API for searching and filtering different types of cocktails, their ingredients, and descriptions."
+                  : "Cocktail App fue construida utilizando Javascript, HTML, CSS, React, React-icons, Axios y Netlify haciendo peticiones a una API de cocteles para búsqueda y filtrado de los diferentes tipos de cocteles, sus ingredientes y descripción."}
               </p>
               <div className="icons-container">
                 <a
-                  href="https://drinks-yordanni-ortiz.netlify.app/"
+                  href="https://cocktail-app-yordanni-ortiz.netlify.app/"
                   target="blank"
                 >
                   <i className="fa-solid fa-display" id="icon-web">
@@ -330,7 +330,7 @@ function Projects() {
                   </i>
                 </a>
                 <a
-                  href="https://github.com/Yordanni-Ortiz/Drinks-App-React"
+                  href="https://github.com/Yordanni-Ortiz/Cocktail-App-React"
                   target="blank"
                 >
                   <i className="fa-brands fa-github" id="icon-github">
