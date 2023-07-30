@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
-import "../assets/styles/rocket.css";
+import "../Rocket/Rocket.css";
 
 const Rocket = () => {
   const [rocketActive, setRocketActive] = useState(false);

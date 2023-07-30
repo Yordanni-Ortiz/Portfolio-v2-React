@@ -1,7 +1,7 @@
-import "../assets/styles/Projects.css";
-import CarouselProjects from "./CarouselProjects";
+import "../Projects/Projects.css";
+import CarouselProjects from "../CarouselProjects/CarouselProjects";
 import React, { useContext, useState, useEffect, useRef } from "react";
-import { LanguageContext } from "./LanguageContext";
+import { LanguageContext } from "../LanguageContext";
 import electronicShop from "/EletronicsShop.mp4";
 import pokeApp from "/PokeApp.mp4";
 import productsCrud from "/ProductsCrud.mp4";

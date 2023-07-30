@@ -2,11 +2,11 @@ import { useState } from "react";
 import { Button, Card, Col, Form, Row } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useContext } from "react";
-import { LanguageContext } from "./LanguageContext";
-import LoadingScreen from "./LoadingScreen";
-import Notification from ".//Notification";
-import axios from "../utils/axios";
-import "../assets/styles/FormEmails.css";
+import { LanguageContext } from "../LanguageContext";
+import LoadingScreen from "../LoadingScreen/LoadingScreen";
+import Notification from "../Notification/Notification";
+import axios from "../../utils/axios";
+import "../FormEmails/FormEmails.css";
 
 function FormEmails() {
   const [isLoading, setIsLoading] = useState(false);

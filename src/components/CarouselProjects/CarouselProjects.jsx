@@ -1,9 +1,9 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../assets/styles/CarouselProjects.css";
+import "../CarouselProjects/CarouselProjects.css";
 import { Carousel, Button } from "react-bootstrap";
 import { useContext } from "react";
-import { LanguageContext } from "./LanguageContext";
+import { LanguageContext } from "../LanguageContext";
 
 function CarouselProjects() {
   const Ecommerce = "https://ecommerce-yordanni-ortiz.netlify.app/";

@@ -1,6 +1,6 @@
-import "../assets/styles/Home.css";
+import "../Home/Home.css";
 import React, { useContext } from "react";
-import { LanguageContext } from "./LanguageContext";
+import { LanguageContext } from "../LanguageContext";
 
 function Home() {
   const { isEnglish } = useContext(LanguageContext);

@@ -1,10 +1,10 @@
-import "../assets/styles/Footer.css";
-import linkedin from "../../public/linkedin.png";
-import whatsapp from "../../public/whatsapp.png";
-import gmail from "../../public/gmail.png";
-import github from "../../public/github.png";
+import "../Footer/Footer.css";
+import linkedin from "/linkedin.png";
+import whatsapp from "/whatsapp.png";
+import gmail from "/gmail.png";
+import github from "/github.png";
 import { useContext } from "react";
-import { LanguageContext } from "./LanguageContext";
+import { LanguageContext } from "../LanguageContext";
 
 function Footer() {
   const wts =

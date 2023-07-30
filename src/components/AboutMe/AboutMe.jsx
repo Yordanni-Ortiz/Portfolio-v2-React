@@ -1,6 +1,6 @@
-import "../assets/styles/AboutMe.css";
+import "../AboutMe/AboutMe.css";
 import { useContext } from "react";
-import { LanguageContext } from "./LanguageContext";
+import { LanguageContext } from "../LanguageContext";
 import { saveAs } from "file-saver";
 
 function AboutMe() {

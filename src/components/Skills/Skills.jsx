@@ -1,6 +1,6 @@
-import "../assets/styles/Skills.css";
+import "../Skills/Skills.css";
 import { useContext } from "react";
-import { LanguageContext } from "./LanguageContext";
+import { LanguageContext } from "../LanguageContext";
 
 function Skills() {
   const { isEnglish } = useContext(LanguageContext);

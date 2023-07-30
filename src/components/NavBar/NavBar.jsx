@@ -1,6 +1,6 @@
 import { useContext, useState, useEffect } from "react";
-import { LanguageContext } from "../components/LanguageContext";
-import "../assets/styles/NavBar.css";
+import { LanguageContext } from "../LanguageContext";
+import "../NavBar/NavBar.css";
 
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,15 +1,15 @@
-import "./assets/styles/App.css";
+import "./App.css";
 import { LanguageProvider } from "./components/LanguageContext";
 import React, { useState, useEffect } from 'react';
-import NavBar from "./components/NavBar";
-import Home from "./components/Home";
-import AboutMe from "./components/AboutMe"
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import FormEmails from "./components/FormEmails";
-import Rocket from "./components/Rocket";
-import Footer from "./components/Footer";
-import LoadingScreen from "./components/LoadingScreen";
+import NavBar from "./components/NavBar/NavBar";
+import Home from "./components/Home/Home";
+import AboutMe from "./components/AboutMe/AboutMe"
+import Skills from "./components/Skills/Skills";
+import Projects from "./components/Projects/Projects";
+import FormEmails from "./components/FormEmails/FormEmails";
+import Rocket from "./components/Rocket/Rocket";
+import Footer from "./components/Footer/Footer";
+import LoadingScreen from "./components/LoadingScreen/LoadingScreen";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);

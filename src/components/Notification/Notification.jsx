@@ -1,6 +1,6 @@
 import React from 'react';
 import { Toast, ToastContainer } from 'react-bootstrap';
-import '../assets/styles/Notification.css'
+import '../Notification/Notification.css'
 
 const Notification = ({ variant, message, show, handleClose }) => {
 
