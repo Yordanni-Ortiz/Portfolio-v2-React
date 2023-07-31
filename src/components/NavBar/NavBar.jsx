@@ -7,11 +7,19 @@ function NavBar() {
   const [isClicked, setIsClicked] = useState(false);
   const [showOverlay, setShowOverlay] = useState(false);
   const { isEnglish, toggleLanguage } = useContext(LanguageContext);
+  const [isLightMode, setIsLightMode] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    document
+      .getElementsByTagName("HTML")[0]
+      .setAttribute("data-theme", isLightMode ? "light" : "dark");
+    localStorage.setItem("theme", isLightMode ? "light" : "dark");
+  }, [isLightMode]);
 
   const handleScroll = () => {
     const navBar = document.querySelector(".background");
@@ -31,28 +39,38 @@ function NavBar() {
     }
   };
 
+  const toggleLightMode = () => {
+    setIsLightMode(!isLightMode);
+  };
+
   return (
     <div className="nav-bar">
       <div className={`overlay ${showOverlay ? "show" : ""}`} />
       <article className="background" />
       <img className="logo" src="/yordLogo.png" alt="" />
       <div className={`nav-list ${isOpen ? "Open" : "Close"}`}>
-        <label className="rocker rocker-small">
-          <input
-            type="checkbox"
-            onChange={() => {
-              "en" ? "es" : "en";
-            }}
-          />
+        <div className="theme-change">
+          <div className="toggle">
+            <div className={`${!isLightMode ? "left-toggle" : "right-toggle"}`}>
+              <i
+                className={`bx icon-toggle ${isLightMode ? "bxs-sun" : "bxs-moon"}`}
+                onClick={toggleLightMode}
+              >
+              </i>
+            </div>
+          </div>
+        </div>
+        <label className="switch">
+          <input type="checkbox" />
           <span
-            className="switch-left"
+            className="left-switch"
             onClick={() => handleLanguageClick("es")}
             disabled={!isEnglish}
           >
             ES
           </span>
           <span
-            className="switch-right"
+            className="right-switch"
             onClick={() => handleLanguageClick("en")}
             disabled={isEnglish}
           >
@@ -82,9 +100,7 @@ function NavBar() {
         </li>
         <li>
           <a href="#ComputerSkills" className="options" onClick={handleClick}>
-            <span>
-              {isEnglish ? "Skills" : "Habilidades"}
-            </span>
+            <span>{isEnglish ? "Skills" : "Habilidades"}</span>
             <span>
               <i className="fa-solid fa-computer"></i>
             </span>
@@ -107,7 +123,7 @@ function NavBar() {
           </a>
         </li>
       </div>
-      <div className={`nav-toggle ${isOpen ? "Open" : ""}`}>
+      <div className="mobile-nav-bar">
         <button
           className={`burger-btn ${isClicked ? "clicked" : ""}`}
           onClick={handleClick}

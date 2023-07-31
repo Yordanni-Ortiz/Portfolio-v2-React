@@ -43,3 +43,14 @@
   );
   transition: 1s;
 }
+
+html{
+  --background-nav-bar: linear-gradient(to top, rgba(2, 26, 30, 0.979), rgba(141, 186, 185, 0.979));
+
+}
+
+html[data-theme='dark']{ 
+  --background-nav-bar: linear-gradient(to top, rgba(8, 2, 30, 0.979), rgba(15, 2, 62, 0.979));
+
+  
+}
