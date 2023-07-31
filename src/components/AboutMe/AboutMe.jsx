@@ -55,7 +55,7 @@ function AboutMe() {
           style={{ "--clr": "rgb(14, 70, 255)", "--i": 0 }}
         >
           <div style={{ textDecoration: "none" }} onClick={downloadCV}>
-            {isEnglish ? "Download CV" : "DescargarCV"}
+            {isEnglish ? "Download CV" : "Descargar CV"}
           </div>
         </div>
       </div>

@@ -45,14 +45,14 @@
 .border-neon {
   position: relative;
   width: 400px;
-  padding: 20px;
+  padding: 15px;
   font-size: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: rgb(0, 0, 0);
   border-radius: 10px;
-  margin: 40px;
+  margin: 60px;
   transition: 1s;
   text-decoration: none;
   overflow: hidden;
@@ -81,7 +81,7 @@
     transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(-360deg);
   }
 }
 .border-neon::after {
@@ -102,7 +102,7 @@
   color: rgb(255, 255, 255);
   opacity: 0.8;
   text-transform: uppercase;
-  letter-spacing: 4px;
+  letter-spacing: 1px;
 }
 .border-neon:hover div {
   opacity: 1;
