@@ -11,7 +11,10 @@
   margin-top: 100px;
   position: relative;
   transition: all 0.3s ease;
-  text-shadow: 0 0 10px #0066ff, 0 0 20px #0066ff, 0 0 30px #0066ff;
+  text-shadow: 
+    0 0 10px var(--projects-text-shadow), 
+    0 0 20px var(--projects-text-shadow), 
+    0 0 30px var(--projects-text-shadow);
 }
 .projects-text::after {
   content: "";
@@ -19,15 +22,14 @@
   bottom: 0;
   left: 0;
   width: 50%;
-  height: 3px;
-  background-color: white;
+  height: 2.5px;
+  background-color: #ffffff;
   transition: width 0.3s ease;
 }
 .projects-text:hover::after {
   width: 100%;
 }
 .projects div {
-  background-color: #222226;
   margin-top: 40px;
   margin-bottom: 40px;
   display: flex;
@@ -36,7 +38,7 @@
   user-select: none;
 }
 .container-descriptions {
-  background-color: #121824 !important;
+  background: var(--background-container-descriptions);
   border-radius: 15px;
   width: 80%;
   display: flex;
@@ -45,7 +47,7 @@
   padding: 15px 0 15px 0;
 }
 .line-style {
-  background-color: #121824 !important;
+  background-color: var(--background-container-descriptions);
   width: 290px;
   height: 260px;
   display: flex;
@@ -59,7 +61,7 @@
   position: absolute;
   width: 600px;
   height: 600px;
-  background-image: conic-gradient(#0060ff 20deg, transparent 80deg);
+  background-image: conic-gradient( var(--line-style) 20deg, transparent 80deg);
   animation: rotar 1s linear infinite;
   border-radius: 10px;
 }
@@ -72,7 +74,7 @@
   }
 }
 .card-description {
-  background-color: #171c45;
+  background-color: var(--background-card-descriptions);
   width: 280px;
   height: 250px;
   display: flex;
@@ -83,14 +85,14 @@
   z-index: 1;
 }
 .card-description:hover {
-  background-color: #171c45;
+  background-color: var(--background-card-descriptions-hover);
   transition: all 0.3s ease;
 }
 .gif {
   width: 25%;
 }
 .number {
-  color: #2986e3;
+  color: var(--color-number);
   font-size: 35px;
   margin-top: 10px;
 }
@@ -121,13 +123,9 @@
   position: relative;
   width: 450px;
   height: 350px;
-  background: linear-gradient(
-    to top,
-    rgba(8, 2, 30, 0.979),
-    rgba(15, 2, 62, 0.979)
-  );
+  background: var(--background-card-project);
   border-radius: 20px;
-  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.507);
+  box-shadow: var(--card-project-shadow);
   transition: 0.5s !important;
 }
 .project-container .card:hover {
@@ -148,7 +146,7 @@
 .project-container .card:hover .videoBx {
   top: -100px;
   scale: 0.75;
-  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.377);
+  box-shadow: var(--shadow-video);
 }
 .project-container .card .videoBx video {
   position: absolute;
@@ -180,7 +178,7 @@
   color: var(--clr);
 }
 .project-container .card .content p {
-  color: #fdfdfd;
+  color: var(--text-card);
 }
 .project-container .card .content .icons-container {
   margin-top: -20px;
@@ -190,8 +188,6 @@
   top: 15px;
   display: inline-block;
   padding: 12px 25px;
-  cursor: default;
-  color: #fff;
   font-weight: 500;
   text-decoration: none;
   border-radius: 8px;

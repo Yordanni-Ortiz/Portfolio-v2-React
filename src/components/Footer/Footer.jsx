@@ -26,7 +26,7 @@ function Footer() {
     <div className="footer">
       <article className="block one">
         <div className="thanks">
-          <p className="thanks certifications">
+          <p className="thanks footer-title">
             {isEnglish ? "Certifications" : "Certificaciones"}
           </p>
           <a href={JavaScript} target="blank">
@@ -59,7 +59,7 @@ function Footer() {
         </div>
       </article>
       <article className="block two">
-        <p className="thanks">
+        <p className="thanks footer-title">
           {isEnglish
             ? "Thank you for visiting my web portfolio, I hope we can work together soon!"
             : "¡Gracias por visitar mi portafolio web, espero que podamos trabajar juntos próximamente!"}
@@ -101,7 +101,7 @@ function Footer() {
         </div>
       </article>
       <article className="block three">
-        <p className="thanks">
+        <p className="thanks footer-title">
           {isEnglish ? "Social Networks" : "Redes Sociales"}
         </p>
         <div>

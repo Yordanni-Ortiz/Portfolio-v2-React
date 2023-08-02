@@ -40,7 +40,7 @@
 .greetings {
   position: absolute;
   top: 31%;
-  color: white;
+  color: var(--text-color-home);
   letter-spacing: 5px;
   font-size: 25px;
   font-weight: 200;
@@ -56,7 +56,8 @@
   color: #020d18;
 }
 .name h1:nth-child(2) {
-  background: linear-gradient(to right, #800868, #1818b0);
+  background: var(--background-h1);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px #010408;
@@ -95,13 +96,11 @@
 .h1-name {
   font-size: 80px;
   font-weight: 600;
-  color: rgba(169, 103, 255, 0);
-  -webkit-text-stroke: 1px rgba(255, 251, 255, 0.986);
-  -webkit-background-clip: text;
+  color: #a967ff00;
   position: absolute;
   top: 29%;
   margin: 0;
-  padding-top: 40px;
+  padding: 40px 0 15px 0;
 }
 /* EFECTO DE NEÓN AL H1 */
 .text-neon {
@@ -149,7 +148,7 @@
   margin-left: 50px;
   animation: typingEN 3s infinite alternate;
   overflow: hidden;
-  border-right: 0.05em solid rgb(255, 255, 255);
+  border-right: 0.05em solid #ffffff;
 }
 @keyframes typingEN {
   0% {
@@ -167,7 +166,7 @@
   margin-left: 50px;
   animation: typingES 3s infinite alternate;
   overflow: hidden;
-  border-right: 0.05em solid rgb(255, 255, 255);
+  border-right: 0.05em solid #ffffff;
 }
 @keyframes typingES {
   from {
@@ -179,7 +178,7 @@
 }
 /* CONTENEDOR DE BIENVENIDA CON EFECTO NEÓN */
 .container-welcome {
-  background: linear-gradient(to top, rgba(8, 2, 30, 0.979), rgba(15, 2, 62, 0.979));
+  background: var(--background-container-welcome);
   border-radius: 12px;
   width: 400px;
   height: 50px;
@@ -191,7 +190,7 @@
 .container-welcome span {
   font-size: 20px;
   font-weight: 800;
-  color: rgba(255, 255, 255, 0);
+  color: #ffffff00;
 }
 .container-welcome > span {
   animation: glow 2s ease-in-out infinite;
@@ -199,13 +198,11 @@
 @keyframes glow {
   0%,
   100% {
-    color: hsl(216, 100%, 50%);
-    text-shadow: 0 0 12px rgb(0, 64, 255), 0 0 50px rgb(0, 64, 255),
-      0 0 100px rgb(0, 64, 255);
+    color: var(--first-color);
   }
   10%,
   90% {
-    color: #0569ff88;
+    color: var(--second-color);
     text-shadow: none;
   }
 }
@@ -312,6 +309,9 @@
 }
 
 @media (max-width: 992px) {
+  .h1-name {
+    padding: 40px 0 25px 0;
+  }
   .astronauta {
     width: 450px;
     top: 110%;

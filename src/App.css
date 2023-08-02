@@ -5,9 +5,8 @@
 }
 .App {
   background-attachment: fixed;
-  background-image: url(/BackgroundClouds.jpg);
+  background-image: url(../../../public/BackgroundClouds.jpg);
   background-repeat: no-repeat;
-  background-size: 100%;
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -17,10 +16,10 @@
   overflow: hidden;
 }
 ::-webkit-scrollbar {
-  background-color: rgba(24, 4, 87, 0.979);
+  background-color: var(--scrollbar);
 }
 ::-webkit-scrollbar-track {
-  background-image: url(/BackgroundClouds.jpg);
+  background-image: url(../../../public/BackgroundClouds.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
   background-attachment: fixed;
@@ -28,18 +27,128 @@
   background-position: center;
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(
-    to top,
-    rgba(24, 4, 87, 0.979),
-    rgba(10, 1, 39, 0.979)
-  );
+  background: var(--scrollbar-thumb);
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(
-    to top,
-    rgba(10, 1, 39, 0.979),
-    rgba(24, 4, 87, 0.979)
-  );
+  background: var(--scrollbar-thumb-hover);
   transition: 1s;
+}
+
+html{
+  /* -----=== App ===----- */
+  --background-app: url(/BackgroundClouds.jpg);
+  --background-app-scroll: url(/BackgroundClouds.jpg);
+  --scrollbar: #00b3ff;
+  --scrollbar-thumb: linear-gradient(to top, #165eb0 0%, #00b3ff 50%);
+  --scrollbar-thumb-hover: linear-gradient(to top, #00b3ff 0%, #165eb0 50%);
+  /* -----=== NavBar ===----- */
+  --background-nav-bar: linear-gradient(to top, #165eb0 0%, #00b3ff 50%);
+  --background-nav-bar-en: linear-gradient(to top, #165eb0 0%, #00b3ff 50%);
+  --background-nav-bar-es: linear-gradient(to top, #165eb0 0%, #00b3ff 50%);
+  --text-color-options: #100F68;
+  --font-weight-options: 500;
+  --burguer-button-color: #056ab8;
+  --background-nav-list: linear-gradient(to top, #165eb0 0%, #00b3ff 50%);
+  --background-toggle: linear-gradient(90deg, #0081d4 0%, #075288 100%);
+  /* -----=== Home ===----- */
+  --background-h1: linear-gradient(to right, #aa19b7 0%, #00c8ff 100%);
+  --text-color-home: #ffffff;
+  --background-container-welcome: linear-gradient(to top, #165eb0 0%, #00b3ff 50%);
+  --first-color: #000000;
+  --second-color: #093676;
+  /* -----=== About Me ===----- */
+  --about-me-text-shadow: #00ccff;
+  --background-button-cv: #056ab8;
+  --border-cv: #43a7f9;
+  /* -----=== Skills ===----- */
+  --skllis-text-shadow: #00ccff;
+  --background-skills-box-tecnologies: #00b3ff;
+  --skills-card-text: #100F68;
+  /*---=== Projects ===----- */
+  --projects-text-shadow: #00ccff;
+  --background-container-descriptions: linear-gradient(to top, #165eb0 0%, #00b3ff 100%);
+  --background-card-descriptions: #033863;
+  --background-card-descriptions-hover: #084b86;
+  --line-style: #00d9ff;
+  --color-number: #00d9ff;
+  --background-card-project: linear-gradient(to top, #165eb0 0%, #00b3ff 50%);
+  --card-project-shadow: 0 35px 80px #07bdff81;
+  --shadow-video: 0 15px 45px #000000;
+  --title-card: #100F68;
+  --text-card: #000000;
+  /*---=== Contact ===----- */
+  --background-placeholder: #ffffff;
+  --placeholder-text: #100F68;;
+  --text-color-card: #100F68;
+  --placeholder-text-example: #3f3f3f;
+  --background-button-submit: #0dd1fd;
+  --background-button-submit-hover: #0b9ad7;
+  --text-color-button-submit: #ffffff;
+  /*---=== Footer ===----- */
+  --background-footer: linear-gradient(to top, #0f4078 0%, #00b3ff 100%);
+  --text-color-footer: #100F68;
+  --text-color-link: #000000;
+  --text-color-link-hover: #3ba4e5;
+  --text-color-link-academlo: #e1081e;
+  --text-color-link-hover-academlo: #4a0f15;
+}
+
+html[data-theme='dark']{ 
+  /* -----=== App ===----- */
+  --background-app: url(/BackgroundClouds.jpg);
+  --background-app-scroll: url(/BackgroundClouds.jpg);
+  --scrollbar: #180457fa;
+  --scrollbar-thumb: linear-gradient(to top,#180457fa,#0a0127fa);
+  --scrollbar-thumb-hover: linear-gradient(to top,#0a0127fa,#180457fa);
+  /* -----=== NavBar ===----- */
+  --background-nav-bar: linear-gradient(to top, #08021e 0%, #0f023e 100%);
+  --background-nav-bar-en: linear-gradient(to top, #08021e 0%, #0f023e 100%);
+  --background-nav-bar-es: linear-gradient(to top, #08021e 0%, #0f023e 100%);
+  --text-color-options: #ffffff;
+  --font-weight-options: 400;
+  --burguer-button-color: #ffffff;
+  --background-nav-list: linear-gradient(to top, #08021e 0%, #0f023e 100%);
+  --background-toggle: linear-gradient(90deg, #072688 0%, #0081d4 100%);
+  /* -----=== Home ===----- */
+  --background-h1: linear-gradient(to right, #800868 0%, #1818b0 100%);
+  --text-color-home: #ffffff;
+  --background-container-welcome: linear-gradient(to top, #08021e 0%, #0f023e 100%);
+  --first-color: #0066ff;
+  --second-color: #0569ff88;
+  /* -----=== About Me ===----- */
+  --about-me-text-shadow: #0066ff;
+  --background-button-cv: #180329;
+  --border-cv: #0e46ff;
+  /* -----=== Skills ===----- */
+  --skllis-text-shadow: #0066ff;
+  --background-skills-box-tecnologies: #180329;
+  --skills-card-text: #ffffff;
+  /* -----=== Projects ===----- */
+  --projects-text-shadow: #0066ff;
+  --background-container-descriptions: #121824;
+  --background-card-descriptions: #222226;
+  --background-card-descriptions-hover: #171c45;
+  --line-style: #0060ff;
+  --color-number: #2986e3;
+  --background-card-project: linear-gradient(to top,#08021efa 0%,#0f023efa 100%);
+  --card-project-shadow: 0 35px 80px #00000081;
+  --shadow-video: 0 15px 45px #0033ffc3;
+  --title-card: #66ef;
+  --text-card: #ffffff;
+  /*---=== Contact ===----- */
+  --background-placeholder: #000000;
+  --placeholder-text: #ffffff;
+  --text-color-card: #ffffff;
+  --placeholder-text-example: #848282;
+  --background-button-submit: #0D6EFD;
+  --background-button-submit-hover: #0B5ED7;
+  --text-color-button-submit: #ffffff;
+  /*---=== Footer ===----- */
+  --background-footer: linear-gradient(to top,#08021efa 0%,#0f023efa 100%);
+  --text-color-footer: #ffffff;
+  --text-color-link: #9a6fd3;
+  --text-color-link-hover: #59317d;
+  --text-color-link-academlo: #e84959;
+  --text-color-link-hover-academlo: #af202e;
 }

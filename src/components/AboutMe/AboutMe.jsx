@@ -51,10 +51,9 @@ function AboutMe() {
         <div
           data-aos="flip-left"
           className="border-neon"
-          href=""
-          style={{ "--clr": "rgb(14, 70, 255)", "--i": 0 }}
+          style={{ "--clr": "var(--border-cv)", "--i": 0 }}
         >
-          <div style={{ textDecoration: "none" }} onClick={downloadCV}>
+          <div onClick={downloadCV}>
             {isEnglish ? "Download CV" : "Descargar CV"}
           </div>
         </div>

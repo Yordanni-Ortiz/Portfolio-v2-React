@@ -14,16 +14,19 @@
   margin-top: 100px;
   position: relative; /* Añadido para posicionar el borde */
   transition: all 0.3s ease; /* Añadido para una transición suave */
-  text-shadow: 0 0 10px #0066ff, 0 0 20px #0066ff, 0 0 30px #0066ff;
+  text-shadow: 
+    0 0 10px var(--about-me-text-shadow), 
+    0 0 20px var(--about-me-text-shadow), 
+    0 0 30px var(--about-me-text-shadow);
 }
 .about-me-text::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 50%;
-  height: 2px;
-  background-color: white;
+  width: 40%;
+  height: 2.5px;
+  background-color: #ffffff;
   transition: width 0.3s ease;
 }
 .about-me-text:hover::after {
@@ -50,14 +53,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(0, 0, 0);
+  background-color: var(--background-button-cv);
   border-radius: 10px;
   margin: 60px;
   transition: 1s;
   text-decoration: none;
   overflow: hidden;
   -webkit-box-reflect: below 1px
-    linear-gradient(transparent, transparent, rgba(128, 128, 128, 0.394));
+    linear-gradient(transparent, transparent, #80808064);
 }
 .border-neon:hover {
   background: var(--clr);
@@ -88,7 +91,7 @@
   content: "";
   position: absolute;
   inset: 4px;
-  background-color: rgb(24, 3, 41);
+  background-color: var(--background-button-cv);
   transition: 0.5s;
   border-radius: 10px;
 }
