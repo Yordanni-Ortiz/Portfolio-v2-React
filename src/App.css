@@ -5,7 +5,7 @@
 }
 .App {
   background-attachment: fixed;
-  background-image: url(../../../public/BackgroundClouds.jpg);
+  background-image: var(--background-app);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -19,7 +19,7 @@
   background-color: var(--scrollbar);
 }
 ::-webkit-scrollbar-track {
-  background-image: url(../../../public/BackgroundClouds.jpg);
+  background-image: var(--background-app-scroll);
   background-repeat: no-repeat;
   background-size: 100%;
   background-attachment: fixed;
