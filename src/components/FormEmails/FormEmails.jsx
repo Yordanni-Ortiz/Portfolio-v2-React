@@ -45,14 +45,13 @@ function FormEmails() {
       <Card className="mt-5 mx-auto card" data-aos="fade-right">
         <Card.Body>
           <Form onSubmit={handleSubmit(submit)}>
-            <h1>{isEnglish ? "Contact" : "Contacto"}</h1>
+            <h1 className="title-form">{isEnglish ? "Contact" : "Contacto"}</h1>
             <Row>
               <Col>
                 <Form.Group className="mb-3" controlId="name">
                   <Form.Label>{isEnglish ? "Name" : "Nombre"}</Form.Label>
                   <Form.Control
                     className="custom-placeholder"
-                    style={{ backgroundColor: "#000000", color: "white" }}
                     placeholder="John Doe"
                     {...register("name")}
                     required={true}
@@ -66,7 +65,6 @@ function FormEmails() {
                     type="tel"
                     pattern="[0-9]*"
                     className="custom-placeholder"
-                    style={{ backgroundColor: "#000000", color: "white" }}
                     placeholder="123456789"
                     {...register("phone")}
                     required={true}
@@ -81,7 +79,6 @@ function FormEmails() {
               <Form.Control
                 type="email"
                 className="custom-placeholder"
-                style={{ backgroundColor: "#000000", color: "white" }}
                 placeholder={
                   isEnglish ? "name@example.com" : "nombre@ejemplo.com"
                 }
@@ -94,7 +91,6 @@ function FormEmails() {
               <Form.Control
                 as="textarea"
                 className="custom-placeholder"
-                style={{ backgroundColor: "#000000", color: "white" }}
                 placeholder={
                   isEnglish
                     ? "Hello! I would like to have an interview with you..."
@@ -105,9 +101,9 @@ function FormEmails() {
               />
             </Form.Group>
             <div className="button">
-              <Button variant="primary" type="submit">
+              <button className="button-submit" type="submit">
                 {isEnglish ? "Submit" : "Enviar"}
-              </Button>
+              </button>
             </div>
           </Form>
         </Card.Body>

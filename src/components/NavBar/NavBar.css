@@ -138,14 +138,14 @@ input:checked + .left-switch + .right-switch::before {
 /* Background del nav-bar activo después del scroll */
 .background-scroll-en{
   position: fixed;
-  background: linear-gradient(to top, rgba(8, 2, 30, 0.979), rgba(15, 2, 62, 0.979));
+  background: var(--background-nav-bar-en);
   border-radius: 0 0 20px 20px;
   width: 590px;
   height: 83px;
 }
 .background-scroll-es{
   position: fixed;
-  background: linear-gradient(to top, rgba(8, 2, 30, 0.979), rgba(15, 2, 62, 0.979));
+  background: var(--background-nav-bar-es);
   border-radius: 0 0 20px 20px;
   width: 660px;
   height: 83px;
@@ -156,7 +156,8 @@ input:checked + .left-switch + .right-switch::before {
 }
 .nav-bar .options {
   text-decoration-line: none;
-  color: #FFFFFF;
+  color: var(--text-color-options);
+  font-weight: var(--font-weight-options);
 }
 .nav-bar a {
   display: block;
@@ -212,7 +213,7 @@ input:checked + .left-switch + .right-switch::before {
   margin-bottom: 4.8px;
 }
 .burger-btn div{
-  background-color: rgb(254, 254, 254);
+  background-color: var(--burguer-button-color);
   height: 2.5px;
   width: 100%;
   border-radius: 5px;
@@ -239,18 +240,18 @@ input:checked + .left-switch + .right-switch::before {
   font-size: 20px;
 }
 .bxs-sun{
-  color: rgb(255, 209, 3);
+  color: #ffd103;
   transition: 0.5s;
 }
 .bxs-moon{
   transition: 0.5s;
-  color: rgb(117, 161, 197);
+  color: #75a1c5;
   
 }
 .toggle{
   width: 60px;
   height: 25px;
-  background: linear-gradient(90deg, rgba(7, 38, 136, 1) 0%, rgba(0, 129, 212, 1) 100%);
+  background: var(--background-toggle);
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -342,7 +343,7 @@ input:checked + .left-switch + .right-switch {
   flex-direction: column;
   align-items: center;
   margin-right: 20px;
-  background-image: linear-gradient(to top, rgba(8, 2, 30, 0.979), rgba(15, 2, 62, 0.979));
+  background: var(--background-nav-list);
   position: fixed;
   left: 0;
   top: 0;
@@ -369,7 +370,7 @@ input:checked + .left-switch + .right-switch {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.539);
+  background-color: #00000089;
   z-index: 1;
   display: none;
 }

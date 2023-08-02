@@ -92,7 +92,7 @@ function Projects() {
         <div className="project-container">
           <div
             className="card"
-            style={{ "--clr": "#66ef" }}
+            style={{ "--clr": "var(--title-card)" }}
             data-aos="fade-right"
             data-aos-duration="1000"
           >
@@ -142,7 +142,7 @@ function Projects() {
 
           <div
             className="card"
-            style={{ "--clr": "#66ef", "--clr2": "#000" }}
+            style={{ "--clr": "var(--title-card)" }}
             data-aos="flip-left"
             data-aos-duration="1000"
             data-aos-offset="100"
@@ -193,7 +193,7 @@ function Projects() {
 
           <div
             className="card"
-            style={{ "--clr": "#66ef" }}
+            style={{ "--clr": "var(--title-card)" }}
             data-aos="fade-left"
             data-aos-duration="1000"
           >
@@ -243,7 +243,7 @@ function Projects() {
 
           <div
             className="card"
-            style={{ "--clr": "#66ef" }}
+            style={{ "--clr": "var(--title-card)" }}
             data-aos="fade-right"
             data-aos-duration="1000"
           >
@@ -293,7 +293,7 @@ function Projects() {
 
           <div
             className="card"
-            style={{ "--clr": "#66ef" }}
+            style={{ "--clr": "var(--title-card)" }}
             data-aos="fade-left"
             data-aos-duration="1000"
           >

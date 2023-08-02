@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    border: 0;
 }
 .container-emails {
     min-height: 65vh;
@@ -9,9 +10,30 @@
 Form.Control {
     font-size: 1px !important;
 }
-h1 {
+.title-form {
     text-align: center;
-    padding-bottom: 30px;
+    padding-bottom: 45px;
+    font-size: 40px;
+}
+.card {
+    background: var(--background-card-project);
+    border-radius: 20px;
+    max-Width: 650px;
+    padding: 30px 20px 30px 20px;
+    color: var(--text-color-card);
+    border-style: none;
+}
+.custom-placeholder {
+    background-color: var(--background-placeholder);
+    color: var(--placeholder-text);
+
+}
+.custom-placeholder:focus {
+    background-color: var(--background-placeholder);
+    color: var(--placeholder-text);
+}
+.custom-placeholder::placeholder {
+    color: var(--placeholder-text-example); 
 }
 .button {
     display: flex;
@@ -19,16 +41,24 @@ h1 {
     align-items: center;
     padding-top: 40px;
 }
-.card {
-    background: linear-gradient(to top, rgba(8, 2, 30, 0.979), rgba(15, 2, 62, 0.979));
-    border-radius: 20px;
-    max-Width: 650px;
-    padding: 30px 20px 30px 20px;
+.button-submit {
+    border-style: none;
+    border-radius: 5px;
+    background-color: var(--background-button-submit);
+    color: var(--text-color-button-submit);
+    width: 80px;
+    height: 38px;
+}
+.button-submit:hover {
+    background-color: var(--background-button-submit-hover);
 }
 
 @media (max-width: 992px){
 .card {
     max-Width: 500px;
+}
+.title-form {
+    font-size: 35px;
 }
 }
 
@@ -40,5 +70,8 @@ h1 {
 .card {
     max-Width: 350px;
     padding: 20px 5px 20px 5px;
+}
+.title-form {
+    font-size: 30px;
 }
 }

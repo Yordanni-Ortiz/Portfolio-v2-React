@@ -6,11 +6,8 @@
   align-items: center;
   margin-top: 100px;
   padding-bottom: 30px;
-  background: linear-gradient(
-    to top,
-    rgba(8, 2, 30, 0.979),
-    rgba(15, 2, 62, 0.979)
-  );
+  background: var(--background-footer);
+  color: var(--text-color-footer);
 }
 .footer .one {
   display: flex;
@@ -18,7 +15,7 @@
   align-items: center;
 }
 .footer a {
-  color: rgba(154, 111, 211, 0.8);
+  color: var(--text-color-link);
   text-shadow: none;
   text-decoration: none;
   font-size: 12px;
@@ -26,13 +23,13 @@
   align-items: center;
 }
 .footer a:hover {
-  color: rgb(89, 49, 125);
+  color: var(--text-color-link-hover);
 }
 .footer .academlo {
-  color: #e84959;
+  color: var(--text-color-link-academlo);
 }
 .footer .academlo:hover {
-  color: rgb(175, 32, 46);
+  color: var(--text-color-link-hover-academlo);
 }
 .footer div {
   text-align: center;
@@ -63,8 +60,8 @@ width: 47px;
   text-align: center;
   font-size: 12px;
 }
-.footer .one .certifications {
-  font-size: 16px;
+.footer-title {
+  font-size: 20px !important;
 }
 
 @media (max-width: 992px) {
@@ -73,6 +70,9 @@ width: 47px;
     flex-direction: column;
     padding: 0;
     padding-top: 15px;
+  }
+  .footer-title {
+    font-size: 18px !important;
   }
   .footer div {
     max-width: none;
@@ -89,6 +89,9 @@ width: 47px;
   .footer .thanks {
     padding-left: 140px;
     padding-right: 140px;
+  }
+  .footer .thanks a {
+    font-size: 10px;  
   }
   .two {
     order: 3;
