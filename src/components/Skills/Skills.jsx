@@ -51,13 +51,22 @@ function Skills() {
           data-aos="fade-down-left"
           data-aos-easing="ease-out-cubic"
           className="skills-box"
+          style={{ "--clr": "#41B883", "--i": 0, alignItems: "center" }}
+        >
+          <img className="icon icon-vue" src="./vue.png" alt="vue icon" />
+          <span>VUE</span>
+        </div>
+        <div
+          data-aos="fade-right"
+          data-aos-easing="ease-out-cubic"
+          className="skills-box"
           style={{ "--clr": "#00D8FF", "--i": 0, alignItems: "center" }}
         >
           <img className="icon icon-react" src="./react.png" alt="react icon" />
           <span>REACT</span>
         </div>
         <div
-          data-aos="fade-right"
+          data-aos="flip-left"
           data-aos-easing="ease-out-cubic"
           className="skills-box"
           style={{ "--clr": "#4CAF50", "--i": 0, alignItems: "center" }}
@@ -66,7 +75,7 @@ function Skills() {
           <span>NODE</span>
         </div>
         <div
-          data-aos="flip-left"
+          data-aos="flip-right"
           data-aos-easing="ease-out-cubic"
           className="skills-box"
           style={{ "--clr": "#FF6C37", "--i": 0, alignItems: "center" }}
@@ -79,7 +88,7 @@ function Skills() {
           <span>POSTMAN</span>
         </div>
         <div
-          data-aos="flip-right"
+          data-aos="fade-left"
           data-aos-easing="ease-out-cubic"
           className="skills-box"
           style={{ "--clr": "#03AFEF", "--i": 0, alignItems: "center" }}
@@ -92,7 +101,7 @@ function Skills() {
           <span>SEQUELIZE</span>
         </div>
         <div
-          data-aos="fade-left"
+          data-aos="fade-right"
           data-aos-easing="ease-out-cubic"
           className="skills-box"
           style={{ "--clr": "#306091", "--i": 0, alignItems: "center" }}
@@ -103,15 +112,6 @@ function Skills() {
             alt="postgresql icon"
           />
           <span>POSTGRESQL</span>
-        </div>
-        <div
-          data-aos="fade-right"
-          data-aos-easing="ease-out-cubic"
-          className="skills-box"
-          style={{ "--clr": "#016089", "--i": 0, alignItems: "center" }}
-        >
-          <img className="icon icon-mysql" src="./mysql.png" alt="mysql icon" />
-          <span>MYSQL</span>
         </div>
         <div
           data-aos="flip-left"

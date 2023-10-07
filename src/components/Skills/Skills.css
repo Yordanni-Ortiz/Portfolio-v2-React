@@ -118,6 +118,7 @@
 .icon-bootstrap {
   width: 55px;
 }
+.icon-vue,
 .icon-react,
 .icon-node,
 .icon-sequelize,
@@ -163,6 +164,7 @@
   .icon-bootstrap {
     width: 45px;
   }
+  .icon-vue,
   .icon-react,
   .icon-node,
   .icon-sequelize,
