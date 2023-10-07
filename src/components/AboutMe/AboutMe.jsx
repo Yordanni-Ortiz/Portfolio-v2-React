@@ -10,11 +10,11 @@ function AboutMe() {
     let url, fileName;
 
     if (isEnglish) {
-      url = "/pdf/CV-Yordanni-Ortiz-Full-Stack-Developer-Eng.pdf";
-      fileName = "CV-Yordanni-Ortiz-Full-Stack-Developer-Eng.pdf";
+      url = "/pdf/CV-Yordanni-Ortiz-Full-Stack-Web-Developer-Eng.pdf";
+      fileName = "CV-Yordanni-Ortiz-Full-Stack-Web-Developer-Eng.pdf";
     } else {
-      url = "/pdf/CV-Yordanni-Ortiz-Desarrollador-Full-Stack-Esp.pdf";
-      fileName = "CV-Yordanni-Ortiz-Desarrollador-Full-Stack-Esp.pdf";
+      url = "/pdf/CV-Yordanni-Ortiz-Desarrollador-Web-Full-Stack-Esp.pdf";
+      fileName = "CV-Yordanni-Ortiz-Desarrollador-Web-Full-Stack-Esp.pdf";
     }
     fetch(url)
       .then((response) => {
