@@ -317,8 +317,8 @@ function Projects() {
               <h2>COCKTAIL APP</h2>
               <p>
                 {isEnglish
-                  ? "Cocktail App was built using Javascript, HTML, CSS, React, React-icons, Axios, and Netlify, making requests to a cocktails API for searching and filtering different types of cocktails, their ingredients, and descriptions."
-                  : "Cocktail App fue construida utilizando Javascript, HTML, CSS, React, React-icons, Axios y Netlify haciendo peticiones a una API de cocteles para búsqueda y filtrado de los diferentes tipos de cocteles, sus ingredientes y descripción."}
+                  ? "Cocktail App was built using Javascript, HTML, CSS, Vue, Axios, and Netlify, making requests to a cocktails API for searching and filtering different types of cocktails, their ingredients, and descriptions."
+                  : "Cocktail App fue construida utilizando Javascript, HTML, CSS, Vue, Axios y Netlify haciendo peticiones a una API de cocteles para búsqueda y filtrado de los diferentes tipos de cocteles, sus ingredientes y descripción."}
               </p>
               <div className="icons-container">
                 <a
@@ -330,7 +330,7 @@ function Projects() {
                   </i>
                 </a>
                 <a
-                  href="https://github.com/Yordanni-Ortiz/Cocktail-App-React"
+                  href="https://github.com/Yordanni-Ortiz/Cocktail-App-Vue"
                   target="blank"
                 >
                   <i className="fa-brands fa-github" id="icon-github">
